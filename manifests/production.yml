@@ -1,0 +1,12 @@
+---
+applications:
+  - name: reimbursewebapp
+    path: ../build/
+    instances: 2
+    buildpacks:
+      - staticfile_buildpack
+    memory: 1024M
+    disk_quota: 500M
+    timeout: 600
+    routes:
+      - route: app.reimburse.digital

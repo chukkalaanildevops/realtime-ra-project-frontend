@@ -1,0 +1,195 @@
+[
+  {
+    "permission": "VIEW_SPECIALIZED_REPORTS",
+    "dependents": []
+  },
+  {
+    "permission": "VIEW_USER_PROFILE",
+    "dependents": []
+  },
+  {
+    "permission": "VIEW_SETTINGS",
+    "dependents": []
+  },
+  {
+    "permission": "VIEW_ADMIN",
+    "dependents": [
+      "VIEW_ADMIN_EXPENSES",
+      "VIEW_ADMIN_REQUESTS",
+      "VIEW_ADMIN_CASH_ADVANCE_REQUESTS",
+      "VIEW_ADMIN_EXPENSES_WITH_REQUESTS",
+      "VIEW_ADMIN_BENEFITS",
+      "VIEW_ALL_SETTLEMENT_LOGS"
+    ]
+  },
+  {
+    "permission": "VIEW_REPORTS",
+    "dependents": [
+      "VIEW_EXPENSE_REPORTS",
+      "VIEW_EXPENSES_WITH_REQUEST_REPORTS",
+      "VIEW_REQUEST_REPORTS",
+      "VIEW_BENEFIT_REPORTS",
+      "VIEW_BENEFITS_ENTITLEMENT_REPORTS",
+      "VIEW_BENEFITS_SPECIALIZED_REPORTS",
+      "VIEW_CASH_ADVANCE_REPORTS",
+      "VIEW_SPECIALIZED_REPORTS"
+    ]
+  },
+  {
+    "permission": "VIEW_ADMIN_EXPENSES",
+    "dependents": [
+      "VIEW_ADMIN_EXPENSE_DETAILS",
+      "VIEW_EXPENSE_ADMIN_ATTACHED_RECEIPTS",
+      "ACTION_ADMIN_UPDATE_EXPENSES",
+      "ACTION_ADMIN_REJECT_EXPENSES",
+      "ACTION_ADMIN_ADD_REMARK_EXPENSES",
+      "ACTION_ADMIN_EXECUTE_CLAIM_SETTLEMENT",
+      "ACTION_ON_EXPENSE_WORKFLOW"
+    ]
+  },
+  {
+    "permission": "VIEW_ADMIN_REQUESTS",
+    "dependents": [
+      "VIEW_ADMIN_REQUEST_DETAILS",
+      "ACTION_ADMIN_UPDATE_REQUESTS",
+      "ACTION_ADMIN_REJECT_REQUESTS",
+      "ACTION_ADMIN_ADD_REMARK_REQUESTS",
+      "ACTION_ADMIN_EXECUTE_REQUEST_POSTING",
+      "ACTION_ON_REQUEST_WORKFLOW"
+    ]
+  },
+  {
+    "permission": "VIEW_ADMIN_CASH_ADVANCE_REQUESTS",
+    "dependents": [
+      "ACTION_ADMIN_ADD_REMARK_CASH_ADVANCE_REQUESTS",
+      "ACTION_ADMIN_DISBURSE_REJECT_CASH_ADVANCE_REQUEST"
+    ]
+  },
+  {
+    "permission": "VIEW_ADMIN_EXPENSES_WITH_REQUESTS",
+    "dependents": [
+      "ACTION_ADMIN_ADD_REMARK_EXPENSES_WITH_REQUESTS",
+      "ACTION_ON_EXPENSE_WITH_REQUEST_WORKFLOW"
+    ]
+  },
+  {
+    "permission": "VIEW_ADMIN_BENEFITS",
+    "dependents": [
+      "ACTION_ADMIN_ADD_REMARK_BENEFITS",
+      "ACTION_ADMIN_UPDATE_BENEFITS",
+      "ACTION_ADMIN_REJECT_BENEFITS",
+      "VIEW_ADMIN_BENEFIT_DETAILS",
+      "ACTION_ADMIN_EXECUTE_BENEFIT_CLAIM_SETTLEMENT",
+      "ACTION_ON_BENEFIT_WORKFLOW",
+      "VIEW_BENEFIT_ADMIN_ATTACHED_RECEIPTS",
+      "ACTION_BENEFIT_ADJUSTMENT"
+    ]
+  },
+  {
+    "permission": "VIEW_SETUP",
+    "dependents": [
+      "VIEW_SETUP_EXPENSE_TYPES",
+      "VIEW_SETUP_REQUEST_TYPES",
+      "VIEW_SETUP_BENEFIT_TYPES",
+      "VIEW_SETUP_CURRENCY_CONVERSIONS",
+      "VIEW_SETUP_EMPLOYEE_GROUPS",
+      "VIEW_SETUP_ROLES",
+      "VIEW_SETUP_RULES",
+      "VIEW_SETUP_REFERENCE_OBJECTS",
+      "VIEW_SETUP_COST_CENTRES",
+      "VIEW_SETUP_WAGE_TYPES",
+      "VIEW_SETUP_GL_ACCOUNTS",
+      "VIEW_SETUP_ENTITIES",
+      "VIEW_SETUP_PROXIES",
+      "ACTION_SETUP_CLAIM_INSPECTOR",
+      "ACTION_SETUP_TRAFFIC_LIGHT_POLICY_CONFIGURATION",
+      "ACTION_SETUP_TRAFFIC_LIGHT_RISK_CONFIGURATION",
+      "VIEW_SETUP_EMAIL_TEMPLATES"
+    ]
+  },
+  {
+    "permission": "VIEW_SETUP_EXPENSE_TYPES",
+    "dependents": ["ACTION_SETUP_EXPENSE_TYPES"]
+  },
+  {
+    "permission": "VIEW_SETUP_REQUEST_TYPES",
+    "dependents": ["ACTION_SETUP_REQUEST_TYPES"]
+  },
+  {
+    "permission": "VIEW_SETUP_BENEFIT_TYPES",
+    "dependents": ["ACTION_SETUP_BENEFIT_TYPES"]
+  },
+  {
+    "permission": "VIEW_SETUP_CURRENCY_CONVERSIONS",
+    "dependents": ["ACTION_SETUP_CURRENCY_CONVERSIONS"]
+  },
+  {
+    "permission": "VIEW_SETUP_EMPLOYEE_GROUPS",
+    "dependents": ["ACTION_SETUP_EMPLOYEE_GROUPS"]
+  },
+  {
+    "permission": "VIEW_SETUP_ROLES",
+    "dependents": ["ACTION_SETUP_ROLES"]
+  },
+  {
+    "permission": "VIEW_SETUP_RULES",
+    "dependents": ["ACTION_SETUP_RULES"]
+  },
+  {
+    "permission": "VIEW_SETUP_REFERENCE_OBJECTS",
+    "dependents": ["ACTION_SETUP_REFERENCE_OBJECTS"]
+  },
+  {
+    "permission": "VIEW_SETUP_COST_CENTRES",
+    "dependents": ["ACTION_SETUP_COST_CENTRES"]
+  },
+  {
+    "permission": "VIEW_SETUP_WAGE_TYPES",
+    "dependents": ["ACTION_SETUP_WAGE_TYPES"]
+  },
+  {
+    "permission": "VIEW_SETUP_GL_ACCOUNTS",
+    "dependents": ["ACTION_SETUP_GL_ACCOUNTS"]
+  },
+  {
+    "permission": "VIEW_SETUP_ENTITIES",
+    "dependents": ["ACTION_SETUP_ENTITIES"]
+  },
+  {
+    "permission": "VIEW_SETUP_PROXIES",
+    "dependents": ["ACTION_SETUP_PROXIES", "ACTION_ON_DELEGATION"]
+  },
+  {
+    "permission": "VIEW_SETUP_EMAIL_TEMPLATES",
+    "dependents": ["ACTION_SETUP_EMAIL_TEMPLATES"]
+  },
+
+  {
+    "permission": "VIEW_EXPENSE_REPORTS",
+    "dependents": ["VIEW_TARGET_AUDIENCE_EXPENSE_REPORTS"]
+  },
+  {
+    "permission": "VIEW_EXPENSES_WITH_REQUEST_REPORTS",
+    "dependents": ["VIEW_TARGET_AUDIENCE_EXPENSES_WITH_REQUEST_REPORTS"]
+  },
+  {
+    "permission": "VIEW_REQUEST_REPORTS",
+    "dependents": ["VIEW_TARGET_AUDIENCE_REQUEST_REPORTS"]
+  },
+  {
+    "permission": "VIEW_BENEFIT_REPORTS",
+    "dependents": ["VIEW_TARGET_AUDIENCE_BENEFIT_REPORTS"]
+  },
+  {
+    "permission": "VIEW_BENEFITS_ENTITLEMENT_REPORTS",
+    "dependents": ["VIEW_TARGET_AUDIENCE_BENEFITS_ENTITLEMENT_REPORTS"]
+  },
+  {
+    "permission": "ACTION_SETUP_CLAIM_INSPECTOR",
+    "dependents": []
+  },
+  {
+    "permission": "ACTION_SF_USERS_DETAILS",
+    "dependents": []
+  }
+]

@@ -1,0 +1,223 @@
+@import '../../../../src/styles/variables.less';
+
+.search-bar-common-container {
+  // width: @gutter*20;
+  .search-bar-dd {
+    width: @gutter*30 !important;
+    min-width: @gutter*35 !important;
+  }
+
+  .search-bar-dd .ant-dropdown-menu-item:hover {
+    background-color: white !important;
+  }
+
+  & .serach-bar {
+    & input {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      font-size: 0.82rem;
+      line-height: 22px;
+      line-height: 1.39rem;
+      color: #292929;
+    }
+  }
+  .title.h1 {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 28px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  .result-container {
+    .ant-tabs-tab {
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 0.8571428571428571rem;
+      line-height: 2rem;
+      align-items: center;
+      color: #4e555c;
+    }
+    .result-tabpane {
+      padding: 0;
+      padding-top: @gutter;
+      max-height: 500px !important;
+      overflow: auto !important;
+      min-height: 200px !important;
+    }
+  }
+
+  .single-result {
+    display: flex;
+    padding: 0.5rem 1rem;
+    align-items: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: @grey2;
+    border-radius: @borderRadious;
+
+    .content-layer {
+      width: 100%;
+      padding: @gutter * 0.25;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .employee-card {
+        flex: 1;
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+
+        > div {
+          margin-left: @gutter*.5;
+        }
+
+        .test {
+          height: @gutter*5 / 3;
+          width: @gutter*5 / 3;
+          border-radius: @gutter*5 / 6;
+          color: @geekblue1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-weight: bold;
+          font-size: @gutter;
+
+          &.EXPE {
+            &.General {
+              background-color: @blue3;
+            }
+            &.Entertainment {
+              background-color: @red3;
+            }
+            &.Petty.Cash {
+              background-color: @volcano3;
+            }
+            &.Mileage {
+              background-color: @gold4;
+            }
+          }
+          &.REQU {
+            &.GENERAL {
+              background-color: @green5;
+            }
+            &.TRAVEL {
+              background-color: @gold4;
+            }
+          }
+
+          .material-menu-icons {
+            width: 26px !important;
+            height: 26px !important;
+            transition: all 0.1s ease-in;
+            vertical-align: middle;
+            margin: 0;
+            pointer-events: none;
+          }
+        }
+        .field2 {
+          width: @gutter*7;
+          color: @grey9;
+          font-weight: bold;
+        }
+
+        .field3 {
+          color: @grey6;
+        }
+        .field4 {
+          color: @grey6;
+        }
+        .field5 {
+          color: @grey6;
+        }
+
+        .circle {
+          height: @gutter*.25;
+          width: @gutter*.25;
+          background-color: @grey5;
+          border-radius: @gutter*.25;
+        }
+      }
+
+      .right-outlined {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  .search-all-btn-container {
+    display: flex;
+    justify-content: center;
+    .search-all-btn {
+      margin: @gutter*.5;
+      text-align: center;
+      font-weight: bold;
+
+      &.disabled {
+        display: none;
+        pointer-events: none;
+        color: gray;
+      }
+    }
+  }
+
+  .title-layer {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    align-items: center;
+    color: #4e555c;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+  }
+
+  .desc-layer {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+  }
+
+  span.desc {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.8571428571428571rem;
+    line-height: 1.4285714285714286rem;
+    color: #68737d;
+    display: inline-flex;
+    flex-direction: column;
+    flex: 11;
+    float: left;
+  }
+  span.right-arrow-icon {
+    float: right;
+    display: inline-flex;
+    flex-direction: column;
+    flex: 1;
+    color: @primary-color;
+  }
+  .tag-layer {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 12px;
+    line-height: 20px;
+    color: #84929f;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+  }
+  .ant-modal-mask {
+    background-color: rgba(0, 0, 0, 0) !important;
+  }
+}

@@ -1,0 +1,46 @@
+@import '../../styles/variables.less';
+
+.user-profile-container {
+  display: block;
+  padding: @gutter*1.5;
+  background: @grey1;
+  border-radius: @borderRadius;
+  min-height: 100%;
+
+  .back-button {
+    padding-bottom: @gutter*0.5;
+  }
+
+  .profile-pic {
+    height: 80px;
+    width: 80px;
+    border-radius: 40px;
+  }
+
+  .user-name {
+    color: @grey9;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .user-position {
+    color: @text-color;
+  }
+
+  .view-profile-button {
+    background-color: @blue1;
+    color: @blue6;
+    border-color: @blue1;
+    float: right;
+  }
+
+  .form {
+    margin-top: @gutter;
+
+    :disabled {
+      border: none;
+      color: @grey9 !important;
+      background-color: @grey2;
+    }
+  }
+}

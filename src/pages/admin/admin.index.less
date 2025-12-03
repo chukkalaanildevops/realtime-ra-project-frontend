@@ -1,0 +1,434 @@
+@import '../../styles/variables.less';
+
+.finance-admin-container {
+  .detail-drawer {
+    .ant-drawer-content-wrapper {
+      top: 130px;
+      height: calc(100% - 130px);
+    }
+    .bank-detail {
+      margin-bottom: @gutter;
+      padding: @gutter * 0.5;
+      background-color: @grey2;
+
+      h3.header {
+        color: @darkTextColor;
+        margin-bottom: @gutter * 0.5;
+      }
+
+      .ant-row:nth-child(2) {
+        margin-bottom: @gutter * 0.4;
+      }
+
+      .detail-field {
+        padding: 0 @gutter * 0.25;
+        margin-bottom: @gutter * 0.5;
+        .label {
+          color: #68737d;
+          margin-bottom: @gutter * 0.4;
+        }
+        .value {
+          color: @darkTextColor;
+        }
+      }
+    }
+    .disbursement-details {
+      padding: @gutter * 0.5;
+      .ant-row:nth-child(2) {
+        margin-bottom: @gutter * 0.4;
+      }
+
+      .detail-field {
+        padding: 0 @gutter * 0.25;
+        margin-bottom: @gutter * 0.5;
+        .label {
+          color: #68737d;
+          margin-bottom: @gutter * 0.4;
+        }
+        .value {
+          color: @darkTextColor;
+        }
+      }
+    }
+  }
+
+  .settlement-processing button {
+    background-color: @grey3;
+    border-radius: 14px;
+    * {
+      color: @grey9 !important;
+    }
+  }
+
+  .action-bar {
+    display: flex;
+    // overflow: hidden;
+    flex-flow: column;
+    background-color: white;
+
+    //common property.
+    .margin-right-15 {
+      margin-right: @gutter * 0.6;
+    }
+
+    &.active {
+      margin-bottom: @gutter;
+      .settlement-selection-instruction {
+        margin: @gutter * 0.6 0 0 0;
+      }
+    }
+
+    > .row {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      &.active {
+        margin-bottom: @gutter * 0.5;
+      }
+
+      .execute-task-button {
+        border: 0;
+        border-radius: 4px;
+        margin-bottom: @gutter * 0.5;
+      }
+      .report-download-button,
+      .filter-toggle-button {
+        border: 0;
+        color: @grey7;
+        border-radius: 4px;
+        background-color: @grey3;
+        margin-bottom: @gutter * 0.5;
+        &.active {
+          color: @primaryColor;
+        }
+      }
+      .execute-task-button,
+      .report-download-button,
+      .settlement-selection-instruction {
+        .margin-right-15; //reused
+      }
+    }
+
+    .settlement-selection-instruction {
+      display: flex;
+      flex: 1;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 0 0 @gutter * 0.6 0;
+
+      span.anticon.anticon-info-circle {
+        margin: 0 @gutter * 0.16 @gutter * 0.16;
+        color: @blue6;
+      }
+
+      .sub-settlement-instruction {
+        .margin-right-15; //reused
+      }
+    }
+  }
+  .benefit-entitlement-user-data {
+    overflow: unset;
+    .ant-table {
+      margin: 0px 25px 0 25px !important;
+    }
+  }
+  .user-data-view {
+    overflow: auto;
+    min-height: 100%;
+    padding: @gutter;
+    background-color: white;
+    .ant-table-wrapper {
+      overflow: hidden;
+    }
+    // .ant-table {
+    //   min-width: 1300px;
+    // }
+    .ant-table-content {
+      overflow: auto hidden !important;
+    }
+    .filter-options-row {
+      margin-bottom: @gutter * 0.5;
+
+      &:not(.right-floated) {
+        padding-left: @gutter * 2.33;
+      }
+
+      &.right-floated {
+        display: flex;
+        flex-flow: row;
+        justify-content: flex-end;
+      }
+
+      .share-button,
+      .filter-button {
+        background-color: @grey3!important;
+        color: @grey7!important;
+      }
+
+      .share-button {
+        margin-right: @gutter * 0.75;
+      }
+    }
+  }
+
+  .aggregated-items {
+    div.profile {
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+
+      .profile-photo {
+        margin-right: @gutter;
+      }
+
+      .profile-details {
+        .name {
+          font-weight: medium;
+        }
+        .designation {
+          color: @grey8;
+        }
+      }
+    }
+
+    tbody > tr {
+      cursor: pointer;
+    }
+
+    &.expense {
+      @media screen and (min-width: 1367px) {
+        tr {
+          th {
+            width: 12%;
+          }
+          th:first-child {
+            width: 52%;
+          }
+        }
+      }
+
+      @media screen and (max-width: 1366px) {
+        tr {
+          th {
+            width: 17%;
+          }
+          th:first-child {
+            width: 32%;
+          }
+        }
+      }
+      td:nth-child(3),
+      td:nth-child(4),
+      td:nth-child(5) {
+        text-align: right !important;
+        padding-right: @gutter;
+      }
+    }
+
+    &.request {
+      @media screen and (min-width: 1367px) {
+        tr {
+          th {
+            width: 12%;
+          }
+          th:first-child {
+            width: 52%;
+          }
+        }
+      }
+
+      @media screen and (max-width: 1366px) {
+        tr {
+          th {
+            width: 17%;
+          }
+          th:first-child {
+            width: 32%;
+          }
+        }
+      }
+
+      td:nth-child(3),
+      td:nth-child(4),
+      td:nth-child(5) {
+        text-align: right !important;
+        padding-right: @gutter;
+        span.currency {
+          margin-right: @gutter * 0.25;
+        }
+      }
+    }
+
+    &.expenses_with_request {
+      td:nth-child(3),
+      td:nth-child(4),
+      td:nth-child(5) {
+        width: 15%;
+        text-align: right !important;
+        padding-right: @gutter;
+      }
+    }
+
+    &.cash_advance_request {
+      td:nth-child(2) {
+        width: 18%;
+      }
+      td:nth-child(3),
+      td:nth-child(4) {
+        width: 18%;
+        text-align: right !important;
+        padding-right: @gutter;
+      }
+    }
+  }
+
+  .load-more-button {
+    display: flex;
+    padding: @gutter * 0.25;
+    justify-content: center;
+  }
+
+  // Table CSS customisations
+  .user-expenses-data {
+    .ant-table {
+      tr {
+        th:first-child {
+          width: 14%;
+        }
+        th:nth-child(2) {
+          width: 10%;
+        }
+        th:nth-child(3) {
+          width: 18%;
+        }
+        th:nth-child(4),
+        th:nth-child(5),
+        th:nth-child(6),
+        th:nth-child(7) {
+          width: 12%;
+        }
+        th:last-child {
+          width: 125px;
+        }
+        td:nth-child(4) {
+          text-align: right !important;
+          padding-right: @gutter;
+        }
+      }
+    }
+    .edit-button,
+    .reject-button,
+    .disburse-button {
+      margin: 0 @gutter * 0.25;
+    }
+  }
+
+  .user-requests-data {
+    th:last-child {
+      width: 125px;
+    }
+  }
+
+  .expenses-with-requests-user-data {
+    td:nth-child(2) {
+      width: 12%;
+    }
+    td:nth-child(5) {
+      padding-right: @gutter;
+      text-align: right !important;
+    }
+    td:nth-child(6) {
+      text-transform: capitalize;
+    }
+    .ant-table-expanded-row {
+      > td {
+        padding: @gutter * 0.5;
+        background-color: @nestedTableBackgroundColor!important;
+      }
+      .ant-table-expanded-row-fixed {
+        width: 100% !important;
+        padding: 0;
+        margin: 0;
+      }
+      .ant-table {
+        margin: 0;
+      }
+    }
+  }
+  .benefit-entitlement {
+    td:nth-child(5) {
+      text-align: left !important;
+    }
+  }
+  .user-cash-advance-requests-data {
+    .ant-table {
+      tr {
+        th:last-child {
+          width: 80px;
+        }
+        td:last-child {
+          .buttons {
+            width: 80px;
+            .ant-btn:first-child {
+              margin-right: @gutter * 0.5;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Settlement Reports Modal
+  .settlement-reports {
+    overflow: auto;
+    max-height: 640px;
+    .ant-list-item-meta-title {
+      font-weight: bold;
+      color: @primaryTextColor;
+    }
+    .ant-list-item-meta-description {
+      color: @grey7;
+      font-size: 12px;
+    }
+  }
+
+  // Disbursement Detail Modal
+  .disbursal-details {
+    .detail-field {
+      padding: 0 @gutter * 0.25;
+      margin-bottom: @gutter * 0.5;
+      .label {
+        color: #68737d;
+        margin-bottom: @gutter * 0.4;
+      }
+      .value {
+        color: @darkTextColor;
+      }
+    }
+  }
+}
+.user-expenses-data,
+.expenses-with-requests-user-data,
+.aggregated-view {
+
+  overflow-x: auto;
+  .ant-table-tbody {
+    .row-background-orange {
+      td {
+        background: #fff5e6 !important;
+        font-size: 1rem; //14px
+      }
+    }
+    .row-background-red {
+      td {
+        background: #ffe6e6 !important;
+        font-size: 1rem; //14px
+      }
+    }
+  }
+  .violationIcon-container {
+    display: flex;
+    font-weight: 600;
+    align-items: center;
+  }
+}

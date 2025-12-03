@@ -1,0 +1,69 @@
+@import '../../../../../styles/variables.less';
+
+.subgroup-item-header {
+  display: flex;
+  align-items: center;
+  color: @grey8!important;
+  padding: 0 @gutter * 0.33;
+  justify-content: space-between;
+
+  .extra {
+    display: flex;
+    flex-flow: row;
+    width: max-content;
+    align-items: center;
+    justify-items: flex-end;
+
+    .item {
+      width: 150px;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+
+      &:last-child {
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        margin-right: @gutter * -0.65;
+
+        .approve-item-button {
+          color: @cyan6;
+          border: 1px solid @cyan6;
+          margin-right: @gutter * 0.5;
+
+          @media screen and (min-width: 992px) {
+            margin-right: @gutter;
+          }
+        }
+
+        .reject-item-button {
+          color: @red6;
+          border: 1px solid @red6;
+        }
+
+        svg {
+          width: 13px;
+          height: 13px;
+          stroke-width: 2px;
+        }
+      }
+
+      .amount {
+        color: @grey8!important;
+        .ant-statistic-content {
+          color: @grey8!important;
+        }
+      }
+    }
+  }
+
+  .count {
+    text-align: center;
+    span {
+      color: @grey8;
+      padding: @gutter * 0.35;
+      background-color: @grey2;
+    }
+  }
+}

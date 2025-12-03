@@ -1,0 +1,72 @@
+@import '../../../styles/variables.less';
+
+.workflow-modal {
+  width: 70% !important;
+  max-height: 80%;
+
+  .ant-modal-header {
+    background: @grey3;
+    .ant-modal-title {
+      color: @darkTextColor;
+    }
+  }
+
+  .workflows {
+    // .date,
+    // .batch-no {
+    //   font-weight: bold;
+    // }
+
+    .workflow-collapse {
+      background-color: white;
+
+      > .ant-collapse-item {
+        background-color: @grey2;
+        border-bottom: 0 !important;
+        margin-bottom: @gutter * 0.5;
+      }
+
+      .ant-collapse-header {
+        background-color: white;
+        border: 1px solid @grey3;
+
+        .workflow-collapse-header {
+          display: flex;
+          flex-flow: row;
+          align-items: center;
+
+          div.text {
+            margin-right: @gutter * 0.25;
+          }
+        }
+      }
+
+      .ant-collapse-content {
+        padding: @gutter * 0.75;
+        .ant-collapse-content-box {
+          padding: 0;
+          background-color: white;
+        }
+      }
+
+      .stalled-message {
+        padding: @gutter * 0.75;
+      }
+
+      .settled-message {
+        padding: @gutter * 0.75;
+        .settled-date,
+        .settled-batch-no {
+          margin: 0 3px;
+        }
+      }
+      .withdrawal-remark {
+        padding: @gutter * 0.75;
+        .title {
+          font-weight: bold;
+          margin-bottom: @gutter * 0.25;
+        }
+      }
+    }
+  }
+}

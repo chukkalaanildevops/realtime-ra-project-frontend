@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "claim_no": "E1234-45676",
+      "expense_type": "Bonding Event",
+      "category": "General",
+      "status": "Approved",
+      "amount": "$ 308",
+      "claimed_on": "12/5/2023"
+    },
+    {
+      "claim_no": "E1234-45676",
+      "expense_type": "Car expense",
+      "category": "Entertainment",
+      "status": "Approved",
+      "amount": "$ 668",
+      "claimed_on": "12/5/2023"
+    },
+    {
+      "claim_no": "E1234-45676",
+      "expense_type": "Parking expense",
+      "category": "General",
+      "status": "Rejected",
+      "amount": "$ 808",
+      "claimed_on": "12/5/2023"
+    },
+    {
+      "claim_no": "E1234-45676",
+      "expense_type": "Car expense",
+      "category": "Entertainment",
+      "status": "Approved",
+      "amount": "$ 668",
+      "claimed_on": "12/5/2023"
+    },
+    {
+      "claim_no": "E1234-45676",
+      "expense_type": "Parking expense",
+      "category": "General",
+      "status": "Rejected",
+      "amount": "$ 808",
+      "claimed_on": "12/5/2023"
+    },
+    {
+      "claim_no": "E1234-45676",
+      "expense_type": "Car expense",
+      "category": "Entertainment",
+      "status": "Pending",
+      "amount": "$ 668",
+      "claimed_on": "12/5/2023"
+    },
+    {
+      "claim_no": "E1234-45676",
+      "expense_type": "Car expense",
+      "category": "Entertainment",
+      "status": "Settled",
+      "amount": "$ 668",
+      "claimed_on": "12/5/2023"
+    },
+    {
+      "claim_no": "E1234-45676",
+      "expense_type": "Car expense",
+      "category": "Entertainment",
+      "status": "Stalled",
+      "amount": "$ 668",
+      "claimed_on": "12/5/2023"
+    }
+  ]
+}

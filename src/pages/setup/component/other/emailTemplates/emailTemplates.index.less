@@ -1,0 +1,47 @@
+@import '../../../../../styles/variables.less';
+
+.email-templates-container {
+  padding: @gutter;
+  min-height: 100%;
+  background: @grey1;
+
+  .app-drawer-email {
+    .ant-drawer-content-wrapper {
+      top: 80px;
+      height: calc(100%-80px);
+    }
+  }
+
+  .ant-form-item:nth-child(3) {
+    margin-bottom: @gutter * 0.25;
+  }
+
+  .detail-field {
+    padding: 0 @gutter * 0.25;
+    margin-bottom: @gutter * 0.75;
+    .label {
+      font-weight: 600;
+      line-height: 1.57rem;
+      word-break: break-word;
+    }
+    .value {
+      line-height: 1.57rem;
+      word-break: break-word;
+      color: @primaryTextColor;
+      &.fit-content {
+        width: fit-content;
+      }
+    }
+  }
+
+  .show-tokens-button {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .email-tokens {
+    margin-top: @gutter * 0.5;
+    &.hidden {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import '../../../../styles/variables.less';
+
+.cash-advance-rejection-form-modal {
+  .ant-modal-content {
+    .ant-modal-title {
+      div {
+        display: inline;
+      }
+    }
+    .ant-modal-body {
+      .field {
+        .message {
+          margin-bottom: @gutter * 0.25;
+          &.required {
+            &:before {
+              content: '*';
+              color: #ff4d4f;
+              margin-right: @gutter * 0.15;
+            }
+          }
+        }
+      }
+    }
+    .ant-modal-footer {
+      border-top: 0;
+      padding: 0 @gutter @gutter;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@import '../../../../styles/variables.less';
+
+.mileage-form-section {
+  .UPDATE .ant-drawer-content-wrapper {
+    top: 84px;
+    height: calc(100% - 84px);
+  }
+
+  .trip-details-info {
+    .receipt-link {
+      margin: 0;
+      padding: 0;
+      color: @linkColor;
+      background: transparent;
+
+      .anticon {
+        color: @linkColor;
+      }
+    }
+
+    .receipt-link ~ .count {
+      display: none;
+    }
+
+    .supporting-doc-link {
+      margin: 0;
+      padding: 0;
+      color: @linkColor;
+      background: transparent;
+
+      .anticon {
+        color: @linkColor;
+      }
+    }
+
+    .supporting-doc-link ~ .count {
+      display: none;
+    }
+  }
+}

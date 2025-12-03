@@ -1,0 +1,117 @@
+@import '../../../../../../styles/variables.less';
+
+.add-rule-container {
+  display: block;
+  min-height: 100%;
+  background: @grey1;
+  padding: @gutter * 0.83;
+  border-radius: @borderRadius;
+  color: @primaryTextColor;
+
+  .title-h2 {
+    color: @primaryTextColor;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.14rem;
+    line-height: 1.57rem;
+    margin: @gutter * 0.42 0;
+    padding: 0;
+  }
+
+  .dd-field {
+    margin-right: 12px;
+  }
+
+  .criteria-box {
+    margin-top: 12px;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    padding: 12px;
+
+    &--header {
+      display: flex;
+      justify-content: space-between;
+
+      &--title {
+        font-weight: bold;
+      }
+
+      &--action {
+        font-style: italic;
+      }
+    }
+
+    &--items {
+      margin-top: 12px;
+    }
+  }
+
+  .option-row {
+    display: flex;
+    // border: 1px solid red;
+
+    &--item {
+      // border: 1px solid black;
+      width: 30%;
+      margin-right: 12px;
+      margin-bottom: 0;
+    }
+  }
+
+  .condition-box {
+    // border: 1px solid lightgray;
+    margin-bottom: 12px;
+  }
+
+  .or-box,
+  .and-box {
+    margin: 12px 0;
+    font-weight: bold;
+  }
+
+  .addnew-button {
+    margin-top: 12px;
+  }
+}
+
+.ant-form-item-label {
+  padding: 0 !important;
+}
+
+table.rules-table {
+  width: 100%;
+  table-layout: fixed;
+
+  td,
+  th {
+    border: 1px solid #d9d9d9;
+    padding: 8px;
+    vertical-align: top;
+
+    &.col1 {
+      width: 45%;
+    }
+
+    &.col2 {
+      width: 32%;
+    }
+
+    &.col3 {
+      width: 45%;
+    }
+
+    &.col4 {
+      width: 6%;
+      text-align: center;
+    }
+  }
+}
+
+.types {
+  .ant-select {
+    width: 100%;
+    .ant-select-selector {
+      align-items: center;
+    }
+  }
+}

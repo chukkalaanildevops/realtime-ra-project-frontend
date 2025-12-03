@@ -1,0 +1,24 @@
+@import '../../../styles/variables.less';
+
+.layout-content {
+  @marginTopVal: @gutter * 2.5;
+  height: 100%;
+  position: relative;
+  .page-header + .page-container {
+    height: calc(100% - @marginTopVal);
+  }
+  .local-header {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .page-container {
+    height: 100%;
+    overflow: auto;
+    padding: @gutter;
+    margin-top: @marginTopVal;
+
+    &.with-breadcrumb {
+      padding-top: @gutter * 1.25;
+    }
+  }
+}

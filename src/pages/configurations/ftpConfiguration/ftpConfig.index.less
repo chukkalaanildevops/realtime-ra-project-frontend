@@ -1,0 +1,35 @@
+@import '../../../styles/variables.less';
+
+.FTP-Config-Container {
+  height: 100%;
+
+  .ant-drawer {
+    .ant-drawer-content-wrapper {
+      top: 140px;
+      height: calc(100% - 140px);
+    }
+  }
+
+  .formContainer {
+    .buttonWrapper {
+      display: flex;
+      justify-content: flex-end;
+      .bottomButtons {
+        margin-left: @gutter * 0.83;
+      }
+    }
+
+    .formContainer {
+      margin-top: @gutter * 0.83;
+    }
+
+    & .form-drawer {
+      & .ant-drawer-content-wrapper {
+        transition: width 0.5s;
+        @media screen and (max-width: 480px) {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+}

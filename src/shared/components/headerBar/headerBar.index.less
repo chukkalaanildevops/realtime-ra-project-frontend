@@ -1,0 +1,42 @@
+@import '../../../styles/variables.less';
+
+.page-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  width: calc(100% - 200px);
+  background-color: white;
+  justify-content: space-between;
+  padding: @gutter * 0.5 @gutter;
+  transition: width 0.1s linear;
+
+  .title {
+    flex-basis: 65%;
+    // font-size: 24px;
+    margin-bottom: 0;
+
+    color: @darkTextColor;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.43rem;
+    line-height: 2rem;
+  }
+
+  .search-container {
+    flex-basis: 35%;
+    margin-right: @gutter * 0.5;
+  }
+
+  .badge-container {
+    flex-basis: 36px;
+    align-self: flex-end;
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

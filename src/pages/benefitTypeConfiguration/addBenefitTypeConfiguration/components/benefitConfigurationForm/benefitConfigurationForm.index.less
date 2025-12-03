@@ -1,0 +1,92 @@
+@import '../../../../../styles/variables.less';
+.benefits-configuration-form {
+  .label-header {
+    @commonCSS: {
+      font-size: 1rem;
+      line-height: 1.57rem;
+      color: @primaryTextColor;
+      margin: @gutter * 0.42 0px;
+      font-style: normal;
+      font-weight: 600;
+    };
+    &:not(.instruction-text-section) {
+      @commonCSS();
+    }
+    &.instruction-text-section {
+      label {
+        @commonCSS();
+      }
+    }
+    &.m-t-0 {
+      margin-top: 0;
+    }
+  }
+  .custom-cost-center {
+    max-height: 360px;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-left: 10px;
+  }
+  .is-Active {
+    padding-left: 10px;
+  }
+  .radio-label {
+    display: inline-block;
+  }
+  .no-height {
+    height: 0 !important;
+  }
+  .field-container {
+    // width: 50%;
+  }
+  .width-80-per {
+    width: 80%;
+  }
+  .width-50 {
+    width: 50% !important;
+  }
+  .policy-item {
+    background: @tagBackgroundColor;
+    display: flex;
+    align-items: center;
+    margin-top: @gutter * 0.33;
+    padding: @gutter * 0.21;
+    justify-content: space-between;
+  }
+  .policy-name {
+    color: @primaryColor;
+    flex: 1;
+    padding-left: @gutter * 0.21;
+    padding-right: @gutter * 0.21;
+  }
+  & .ant-form-item {
+    margin-bottom: @gutter*0.42;
+    & .ant-form-item-label {
+      text-transform: capitalize;
+      // text-align: right;
+      padding-bottom: 0;
+      & label {
+        width: 100%;
+        & .custom-label {
+          display: flex;
+          flex: 1;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+    }
+    & .quill {
+      & * {
+        font-family: 'Poppins' !important;
+        border-color: @borderColor;
+        border-radius: @borderRadious;
+      }
+      & .ql-editor {
+        min-height: 100px;
+      }
+    }
+    &.form-footer {
+      text-align: right;
+    }
+  }
+}

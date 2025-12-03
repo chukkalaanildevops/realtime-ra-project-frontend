@@ -1,0 +1,75 @@
+@import '../../styles/variables.less';
+.delegate-container {
+  height: 100%;
+  .ant-drawer-content-wrapper {
+    top: 130px;
+    height: calc(100% - 130px);
+  }
+
+  .action-button {
+    background-color: @grey2;
+    .anticon {
+      color: @grey5;
+    }
+    svg {
+      width: 13px;
+      height: 13px;
+    }
+    &.approve {
+      border: 1px solid @grey5;
+      &.PENDNG {
+        background-color: @grey1;
+        .anticon {
+          color: @cyan6!important;
+        }
+        border: 1px solid @cyan6;
+      }
+    }
+    &.reject {
+      border: 1px solid @grey5;
+      &.PENDNG {
+        background-color: @grey1;
+        .anticon {
+          color: @red6!important;
+        }
+        border: 1px solid @red6;
+      }
+    }
+  }
+
+  .permission-checkbox {
+    display: block;
+    margin-left: 0 !important;
+    margin-bottom: @gutter * 0.2;
+  }
+
+  .fields {
+    margin-bottom: @gutter * 0.75;
+    .detail-field {
+      .field-label {
+        color: @grey8;
+        min-height: 28px;
+        line-height: 2rem;
+      }
+      .field-value {
+        background: @grey2;
+        border: 1px solid @grey2;
+        box-sizing: border-box;
+        border-radius: @borderRadious;
+        line-height: 1.57rem;
+        color: @darkTextColor;
+        min-height: @formFieldHeight;
+        padding: @gutter*0.375 @gutter*0.458;
+      }
+    }
+  }
+
+  ul.permissions {
+    padding: @gutter * 0.5 0;
+    li.permission {
+      color: @darkTextColor;
+      margin-left: @gutter * 0.75;
+      margin-bottom: @gutter * 0.25;
+    }
+  }
+}

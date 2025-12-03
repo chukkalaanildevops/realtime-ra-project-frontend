@@ -1,0 +1,92 @@
+@import '../../../styles/variables.less';
+
+.ssoConfig-container {
+  background-color: @grey1;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+
+  .ant-drawer {
+    .ant-drawer-content-wrapper {
+      top: 140px;
+      height: calc(100% - 140px);
+    }
+  }
+
+  .disabled-config {
+    text-decoration: line-through;
+    opacity: 0.5;
+  }
+  & table {
+    & .column-action {
+      text-align: center;
+    }
+  }
+
+  .fullscreen-form-button {
+    border: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  & .form-drawer {
+    & .ant-drawer-content-wrapper {
+      transition: width 0.5s;
+      @media screen and (max-width: 480px) {
+        width: 100% !important;
+      }
+    }
+    .fullscreenform-container {
+      display: flex;
+      margin: @gutter*0.67 0rem;
+      padding: @gutter*1.33 0rem;
+      width: 60%;
+    }
+  }
+  .description-container {
+    display: flex;
+    margin: @gutter*1.33 @gutter*0.67;
+    margin-left: auto;
+    margin-right: auto;
+    padding: @gutter*1.33;
+    width: 80%;
+    box-shadow: @boxShadow;
+    border-radius: @borderRadius;
+
+    & .close-btn-container {
+      & .ant-descriptions-item-content {
+        display: flex;
+        flex: 1;
+        width: 100%;
+      }
+    }
+    & .ant-descriptions-item-label {
+      width: 20%;
+      display: inline-flex;
+      justify-content: space-between;
+    }
+    & .ant-descriptions-item-content {
+      width: 80%;
+      display: inline-flex;
+    }
+    @media screen and (min-width: 900px) and (max-width: 1200px) {
+      & .ant-descriptions-item-label {
+        width: 30%;
+      }
+      & .ant-descriptions-item-content {
+        width: 70%;
+      }
+    }
+    @media screen and (max-width: 900px) {
+      & .ant-descriptions-item-label {
+        width: 100%;
+        justify-content: unset;
+      }
+      & .ant-descriptions-item-content {
+        width: 100%;
+      }
+    }
+  }
+}

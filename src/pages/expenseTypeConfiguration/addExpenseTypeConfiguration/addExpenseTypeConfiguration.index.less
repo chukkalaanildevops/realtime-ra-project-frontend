@@ -1,0 +1,29 @@
+@import '../../../styles/variables.less';
+
+.ExpenseTypeConfiguration-container {
+  // Write all css related to this component here.
+  //   if you want to add global css? add it in src/index.less file, but dont add anything outside this bracket.
+  @marginBottom: @gutter * 3.75;
+  border: unset;
+  margin-bottom: @marginBottom;
+  min-height: clac(100% - @marginBottom);
+
+  .tab-footer {
+    position: absolute;
+    bottom: 60px;
+    left: 0px;
+    width: 100%;
+    text-align: right;
+    padding: @gutter * 0.67 @gutter * 2;
+    background: @footerBackgroundColor;
+    box-shadow: @boxShadow;
+  }
+
+  .ant-tabs {
+    .ant-tabs-content {
+      .ant-tabs-tabpane {
+        min-height: calc(100vh / 1.35);
+      }
+    }
+  }
+}

@@ -1,0 +1,81 @@
+export const ENTITLEMENT_RULES_ACTION_TYPES = {
+  SET_LOADING: 'ENTITLEMENT_RULES_ACTION_TYPES/SET_LOADING',
+  SET_ENTITLEMENT_RULE_ITEM_LOADING:
+    'ENTITLEMENT_RULES_ACTION_TYPES/SET_ENTITLEMENT_RULE_ITEM_LOADING',
+  SET_LOADING_MESSAGE: 'ENTITLEMENT_RULES_ACTION_TYPES/SET_LOADING_MESSAGE',
+  SAVE_ENTITLEMENT_RULES:
+    'ENTITLEMENT_RULES_ACTION_TYPES/SAVE_ENTITLEMENT_RULES',
+  SET_ERROR: 'ENTITLEMENT_RULES_ACTION_TYPES/SET_ERROR',
+  SAVE_ENTITLEMENT_RULE_BY_ID:
+    'ENTITLEMENT_RULES_ACTION_TYPES/SAVE_ENTITLEMENT_RULE_BY_ID',
+
+  SET_ENTITLEMENT_RULES_LOADER:
+    'ENTITLEMENT_RULES_ACTION_TYPES/SET_ENTITLEMENT_RULES_LOADER',
+  FETCH_SIMULATED_ENTITLEMENT_DATA:
+    'ENTITLEMENT_RULES_ACTION_TYPES/FETCH_SIMULATED_ENTITLEMENT_DATA',
+  FETCH_SIMULATED_LIST_DATA:
+    'ENTITLEMENT_RULES_ACTION_TYPES/FETCH_SIMULATED_LIST_DATA',
+  SET_SIMULATED_LIST_LOADER:
+    'ENTITLEMENT_RULES_ACTION_TYPES/SET_SIMULATED_LIST_LOADER',
+  SET_SIMULATED_DATA_LOADER:
+    'ENTITLEMENT_RULES_ACTION_TYPES/SET_SIMULATED_DATA_LOADER',
+  SET_SIMULATED_LIST_DATA_LOADER:
+    'ENTITLEMENT_RULES_ACTION_TYPES/SET_SIMULATED_LIST_DATA_LOADER',
+};
+
+export const setLoader = (isLoading: boolean) => ({
+  type: ENTITLEMENT_RULES_ACTION_TYPES.SET_LOADING,
+  payload: isLoading,
+});
+
+export const setEntitlementRuleItemLoader = (isLoading: boolean) => ({
+  type: ENTITLEMENT_RULES_ACTION_TYPES.SET_ENTITLEMENT_RULE_ITEM_LOADING,
+  payload: isLoading,
+});
+
+export const setLoadingMessage = (message: string) => ({
+  type: ENTITLEMENT_RULES_ACTION_TYPES.SET_LOADING_MESSAGE,
+  payload: message,
+});
+
+export const saveEntitlementRules = (data: any) => ({
+  type: ENTITLEMENT_RULES_ACTION_TYPES.SAVE_ENTITLEMENT_RULES,
+  payload: data,
+});
+export const setEntitlementRulesLoader = (loader: boolean) => ({
+  type: ENTITLEMENT_RULES_ACTION_TYPES.SET_ENTITLEMENT_RULES_LOADER,
+  payload: loader,
+});
+export const setError = (error: string) => ({
+  type: ENTITLEMENT_RULES_ACTION_TYPES.SET_ERROR,
+  payload: error,
+});
+
+export const saveEntitlementRuleById = (data: any) => ({
+  type: ENTITLEMENT_RULES_ACTION_TYPES.SAVE_ENTITLEMENT_RULE_BY_ID,
+  payload: data,
+});
+
+export const fetchSimulatedEntitlementData = (data: any) => ({
+  type: ENTITLEMENT_RULES_ACTION_TYPES.FETCH_SIMULATED_ENTITLEMENT_DATA,
+  payload: data,
+});
+export const fetchSimulatedListData = (data: any) => ({
+  type: ENTITLEMENT_RULES_ACTION_TYPES.FETCH_SIMULATED_LIST_DATA,
+  payload: data,
+});
+
+export const setSimulatedDataLoader = (isLoading: boolean) => ({
+  type: ENTITLEMENT_RULES_ACTION_TYPES.SET_SIMULATED_DATA_LOADER,
+  payload: isLoading,
+});
+
+export const setSimulatedListLoader = (isLoading: boolean) => ({
+  type: ENTITLEMENT_RULES_ACTION_TYPES.SET_SIMULATED_LIST_LOADER,
+  payload: isLoading,
+});
+
+export const setSimulatedDataListLoader = (isLoading: boolean) => ({
+  type: ENTITLEMENT_RULES_ACTION_TYPES.SET_SIMULATED_LIST_DATA_LOADER,
+  payload: isLoading,
+});

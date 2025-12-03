@@ -1,0 +1,118 @@
+@import '../../styles/variables.less';
+
+.cost-centres-container {
+  padding: @gutter;
+  min-height: 100%;
+  background: @grey1;
+  border-radius: @borderRadius;
+  min-height: 100%;
+
+  .back-button-filter-bar {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .filters-button {
+      border: 0;
+      color: @grey6;
+      border-radius: 4px;
+      background-color: @blue1;
+      &.active {
+        color: @primaryColor;
+      }
+    }
+  }
+
+  .filters-container {
+    overflow: hidden;
+    padding: @gutter * 0.75;
+    margin-bottom: @gutter;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+
+    &.hidden {
+      height: 0;
+      padding: 0;
+      margin: 0;
+      box-shadow: none;
+      transition: height 0.3s ease-in;
+    }
+
+    .row {
+      display: flex;
+      flex-flow: row;
+      flex-wrap: wrap;
+
+      .filter-option {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        margin-right: @gutter;
+        margin-bottom: @gutter;
+        border: 1px solid @grey3;
+        padding: 0 @gutter * 0.33;
+
+        .filter-label {
+          margin-right: @gutter * 0.5;
+          &:after {
+            content: '.';
+            margin-left: @gutter * 0.1;
+          }
+        }
+
+        .customised-dropdown {
+          width: 180px;
+        }
+        .search-query {
+          border: 0;
+          width: 240px;
+          padding: @gutter * 0.25;
+          box-shadow: none;
+        }
+      }
+    }
+
+    .buttons {
+      flex: 1;
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+      justify-self: flex-end;
+      justify-content: flex-end;
+
+      .reset-filter-button {
+        margin-right: @gutter * 0.5;
+      }
+    }
+  }
+
+  .ant-drawer {
+    .ant-drawer-content-wrapper {
+      top: 84px;
+      height: calc(100% - 84px);
+    }
+  }
+
+  .filter-container {
+    .field-container {
+      margin-top: @gutter*0.6;
+      display: flex;
+      flex-direction: column;
+      .label {
+        font-size: 12px;
+      }
+
+      .value {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .update-cost-centre-form {
+    max-width: 600px;
+    .buttons {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}

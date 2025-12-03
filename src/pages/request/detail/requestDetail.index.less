@@ -1,0 +1,62 @@
+@import '../../../styles/variables.less';
+
+.request-detail {
+  // padding: @gutter * 0.5 @gutter * 2;
+  padding: 10px 0 0 !important;
+  .label {
+    height: 24px !important;
+    align-items: flex-start;
+    overflow: hidden;
+    min-height: auto;
+    margin-bottom: 8px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    display: block;
+  }
+
+  .fill-white {
+    .ant-btn {
+      height: unset;
+      word-break: break-all;
+      white-space: unset;
+    }
+  }
+}
+.document-item {
+  background: @tagBackgroundColor;
+  display: flex;
+  align-items: center;
+  margin-top: @gutter * 0.33;
+  padding: @gutter * 0.21;
+  justify-content: space-between;
+}
+.document-name {
+  color: @primaryColor;
+  flex: 1;
+  padding-left: @gutter * 0.21;
+  padding-right: @gutter * 0.21;
+}
+
+.additional-documents {
+}
+ .approval-risk-container {
+    padding: 10px;
+    margin-bottom: 20px;
+    &__risk-score {
+      padding-bottom: 10px;
+    }
+    &__risk-criteria-title {
+      padding-bottom: 5px;
+    }
+    &__risk-criteria-data {
+      padding-left: 15px;
+    }
+  }
+  .background-color-orange {
+    background-color: #fff5e6;
+  }
+  .background-color-red {
+    background-color: #ffe6e6;
+  }
+ 

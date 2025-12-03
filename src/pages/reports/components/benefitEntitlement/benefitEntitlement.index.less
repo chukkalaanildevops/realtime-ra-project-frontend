@@ -1,0 +1,69 @@
+@import '../../../../styles/variables.less';
+
+.profile {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+
+  .profile-photo {
+    margin-right: @gutter;
+  }
+
+  .profile-details {
+    .name {
+      font-weight: medium;
+    }
+    .designation {
+      color: @grey8;
+    }
+  }
+}
+.aggregated-view {
+  tbody > tr {
+    cursor: pointer;
+  }
+}
+.benefit-entitlement-user-data {
+  overflow: unset;
+  .ant-table {
+    margin: 0px 25px 0 25px !important;
+  }
+}
+.user-data-view {
+  overflow: auto;
+  min-height: 100%;
+  padding: @gutter;
+  background-color: white;
+  .ant-table-wrapper {
+    overflow: hidden;
+  }
+  // .ant-table {
+  //   min-width: 1300px;
+  // }
+  .ant-table-content {
+    overflow: auto hidden !important;
+  }
+  .filter-options-row {
+    margin-bottom: @gutter * 0.5;
+
+    &:not(.right-floated) {
+      padding-left: @gutter * 2.33;
+    }
+
+    &.right-floated {
+      display: flex;
+      flex-flow: row;
+      justify-content: flex-end;
+    }
+
+    .share-button,
+    .filter-button {
+      background-color: @grey3!important;
+      color: @grey7!important;
+    }
+
+    .share-button {
+      margin-right: @gutter * 0.75;
+    }
+  }
+}

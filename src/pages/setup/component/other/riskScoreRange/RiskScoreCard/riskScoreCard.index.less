@@ -1,0 +1,124 @@
+@import '../../../../../../styles/variables.less';
+
+.riskscore-card {
+  padding: 10px;
+  .riskscore-title-wrapper {
+    margin-bottom: 20px;
+    label {
+      font-weight: 600;
+    }
+    .risk-title {
+      margin-left: 10px;
+      &.warning {
+        color: @yellow6;
+        svg {
+          fill: @yellow6;
+        }
+      }
+      &.error {
+        color: @red6;
+        svg {
+          fill: @red6;
+        }
+      }
+    }
+  }
+  .rangeslider-wrapper {
+    padding: 40px 0;
+
+    .riskscore-slider {
+      .ant-slider-rail {
+        height: 6px;
+      }
+      .ant-slider-handle {
+        background-color: #000;
+        border: solid 2px #000;
+      }
+      .ant-slider {
+        &:hover {
+          .ant-slider-handle {
+            &:not(.ant-tooltip-open) {
+              border-color: #000;
+            }
+          }
+        }
+      }
+      &.warning {
+        .ant-slider-track {
+          background-color: @yellow6 !important;
+        }
+        .ant-slider-disabled {
+          .ant-slider-track {
+            background-color: @yellow6 !important;
+          }
+        }
+      }
+      &.error {
+        .ant-slider-track {
+          background-color: @red6 !important;
+        }
+        .ant-slider-disabled {
+          .ant-slider-track {
+            background-color: @red6 !important;
+          }
+        }
+      }
+    }
+  }
+  .range-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    // flex-wrap: wrap;
+    gap: 8px;
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      .input-range {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        width: 67px;
+      }
+    }
+    label {
+      font-weight: 500;
+    }
+  }
+}
+.react-thumb {
+  height: 10px;
+  width: 10px;
+  background: #000;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+.custom-thumb {
+  position: absolute;
+  padding: 3px 10px;
+  border: 1px solid #000;
+  color: #000;
+  top: -35px;
+  left: -13px;
+  border-radius: 5px;
+}
+.react-track {
+  background-color: #f0f0f0;
+  height: 8px;
+}
+.react-track-1 {
+  background-color: #f5d505;
+}
+.react-track-2 {
+  background-color: #ff1744;
+}
+.react-slider {
+  border-color: #1890ff;
+  height: 8px;
+  width: 100%;
+  margin-top: -6px;
+  background-color: #fff;
+}

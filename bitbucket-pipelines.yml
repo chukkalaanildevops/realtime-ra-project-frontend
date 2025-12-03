@@ -1,0 +1,252 @@
+image: node:16
+# Define services and its version.
+definitions:
+  services:
+    docker: # can only be used with a self-hosted runner
+      image: docker:dind
+    python:
+      image: python:3.8
+
+pipelines:
+  branches:
+    develop:
+        - step:
+            name: Build Application
+            deployment: Develop
+            caches:
+              - node
+            runs-on:
+              - 'refrontendrunner'
+              - 'self.hosted'
+            script:
+              - touch .env
+              - printf -- "$DEV_ENVS" > .env
+              - npm install
+              - npm run test:nowatch
+              - CI=false npm run build
+            size: 2x
+            artifacts:
+              - build/**
+              - .env
+        - step:
+            name: Security Scan
+            runs-on:
+              - 'refrontendrunner'
+              - 'self.hosted'
+            script:
+              # Run a security scan for sensitive data.
+              # See more security tools at https://bitbucket.org/product/features/pipelines/integrations?&category=security
+              - pipe: atlassian/git-secrets-scan:0.4.3
+        - step:
+            name: Deploy To Dev Environment
+            trigger: automatic
+            clone:
+              enabled: false
+            runs-on:
+              - 'refrontendrunner'
+              - 'self.hosted'
+            script:
+              - pipe: atlassian/aws-s3-deploy:1.1.0
+                variables:
+                  AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                  AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                  AWS_DEFAULT_REGION: 'ap-southeast-1'
+                  S3_BUCKET: $S3_BUCKET
+                  ACL: 'public-read'
+                  LOCAL_PATH: 'build'
+    
+    pre-develop:
+        - step:
+            name: Build Application
+            deployment: Develop
+            caches:
+              - node
+            runs-on:
+              - 'refrontendrunner'
+              - 'self.hosted'
+            script:
+              - touch .env
+              - printf -- "DEV_NEW_ENVS" > .env
+              - npm install
+              - npm run test:nowatch
+              - CI=false npm run build
+            size: 2x
+            artifacts:
+              - build/**
+              - .env
+        - step:
+            name: Security Scan
+            runs-on:
+              - 'refrontendrunner'
+              - 'self.hosted'
+            script:
+              # Run a security scan for sensitive data.
+              # See more security tools at https://bitbucket.org/product/features/pipelines/integrations?&category=security
+              - pipe: atlassian/git-secrets-scan:0.4.3
+        - step:
+            name: Deploy To Pre-Dev Environment
+            trigger: automatic
+            clone:
+              enabled: false
+            runs-on:
+              - 'refrontendrunner'
+              - 'self.hosted'
+            script:
+              - pipe: atlassian/aws-s3-deploy:1.1.0
+                variables:
+                  AWS_ACCESS_KEY_ID: $AWS_DEV_ACCESS_KEY_ID
+                  AWS_SECRET_ACCESS_KEY: $AWS_DEV_SECRET_ACCESS_KEY
+                  AWS_DEFAULT_REGION: 'ap-south-1'
+                  S3_BUCKET: $S3_NEW_BUCKET
+                  ACL: 'public-read'
+                  LOCAL_PATH: 'build'
+
+    pre-release:
+        - step:
+            name: Build Application
+            deployment: QA
+            caches:
+              - node
+            runs-on:
+              - 'refrontendrunner'
+              - 'self.hosted'
+            script:
+              - touch .env
+              - printf -- "$QA_ENVS" > .env
+              - npm install
+              - npm run test:nowatch
+              - CI=false npm run build-qa
+            size: 2x
+            artifacts:
+              - build/**
+              - .env
+        - step:
+            name: Security Scan
+            runs-on:
+              - 'refrontendrunner'
+              - 'self.hosted'
+            script:
+              # Run a security scan for sensitive data.
+              # See more security tools at https://bitbucket.org/product/features/pipelines/integrations?&category=security
+              - pipe: atlassian/git-secrets-scan:0.4.3
+        - step:
+            name: Deploy To QA Environment
+            trigger: automatic
+            clone:
+              enabled: false
+            runs-on:
+              - 'refrontendrunner'
+              - 'self.hosted'
+            script:
+              - pipe: atlassian/aws-s3-deploy:1.1.0
+                variables:
+                  AWS_ACCESS_KEY_ID: $AWS_DEV_ACCESS_KEY_ID
+                  AWS_SECRET_ACCESS_KEY: $AWS_DEV_SECRET_ACCESS_KEY
+                  AWS_DEFAULT_REGION: 'ap-south-1'
+                  S3_BUCKET: $S3_BUCKET_QA
+                  ACL: 'public-read'
+                  LOCAL_PATH: 'build'
+    release/v*:
+        - step:
+            name: Build Application
+            deployment: Release
+            caches:
+              - node
+            runs-on:
+              - 'refrontendrunner'
+              - 'self.hosted'
+            script:
+              - touch .env
+              - printf -- "$STAGE_ENVS" > .env
+              - npm install
+              - npm run test:nowatch
+              - CI=false npm run buildStaging
+            size: 2x
+            artifacts:
+              - build/**
+              - .env
+        - step:
+            name: Security Scan
+            runs-on:
+              - 'refrontendrunner'
+              - 'self.hosted'
+            script:
+              # Run a security scan for sensitive data.
+              # See more security tools at https://bitbucket.org/product/features/pipelines/integrations?&category=security
+              - pipe: atlassian/git-secrets-scan:0.4.3
+        - step:
+            name: Deploy To Stage Environment
+            trigger: automatic
+            clone:
+              enabled: false
+            runs-on:
+              - 'refrontendrunner'
+              - 'self.hosted'
+            script:
+              - pipe: atlassian/aws-s3-deploy:1.1.0
+                variables:
+                  AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                  AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                  AWS_DEFAULT_REGION: 'ap-southeast-1'
+                  S3_BUCKET: $S3_BUCKET_STAGE
+                  ACL: 'public-read'
+                  LOCAL_PATH: 'build'
+    master:
+        - step:
+            name: Build Application
+            deployment: Production
+            caches:
+              - node
+            runs-on:
+              - 'refrontendrunner'
+              - 'self.hosted'
+            script:
+              - touch .env
+              - printf -- "$PROD_ENVS" > .env
+              - npm install
+              - npm run test:nowatch
+              - sed -i 's/REACT_APP_ENVIRONMENT=DEVELOPMENT react-app-rewired start/REACT_APP_ENVIRONMENT=SAP_PRODUCTION node server.js/g' package.json
+              - cat package.json
+              - CI=false npm run-script buildProductionSAP
+              - cp -R nginx build/
+              - cp Staticfile build/Staticfile
+              # - touch build/Staticfile
+              # - >-
+              #   printf "pushstate: enabled" > build/Staticfile
+              #   printf "location_include: ./includes/*.conf" > build/Staticfile
+            size: 2x
+            artifacts:
+              - build/**
+              - .env
+              - package.json
+              - scripts/**
+              - manifests/**
+              - ngnix/**
+        - step:
+            name: Security Scan
+            runs-on:
+              - 'refrontendrunner'
+              - 'self.hosted'
+            script:
+              # Run a security scan for sensitive data.
+              # See more security tools at https://bitbucket.org/product/features/pipelines/integrations?&category=security
+              - pipe: atlassian/git-secrets-scan:0.4.3
+        - step:
+            name: Deploy To production Environment
+            trigger: automatic
+            clone:
+              enabled: false
+            runs-on:
+              - 'refrontendrunner'
+              - 'self.hosted'
+            script:
+              - pwd
+              - ls -al
+              - sh scripts/install_cfcli.sh
+              - cf login -u ${CF_USERNAME} -p ${CF_PASSWORD} -a ${CF_API_ENDPOINT} -o "${CF_PRODUCTION_ORGANISATION}" -s ${CF_PRODUCTION_SPACE}
+              - export CF_DOCKER_PASSWORD=${DOCKER_PASSWORD}
+              - cf push -f manifests/production.yml
+              - >-
+                sed -i 's/"start": "REACT_APP_ENVIRONMENT=SAP_PRODUCTION node server.js"/"start": "REACT_APP_ENVIRONMENT=DEVELOPMENT react-app-rewired start"/g' package.json
+              - rm -rf build
+              - rm .env

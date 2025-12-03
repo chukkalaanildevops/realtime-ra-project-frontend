@@ -1,0 +1,58 @@
+@import '../../../../styles/variables.less';
+
+.disbursal-form-modal {
+  .bank-detail {
+    margin-bottom: @gutter;
+    padding: @gutter * 0.5;
+    background-color: @grey2;
+
+    h3.header {
+      color: @darkTextColor;
+      margin-bottom: @gutter * 0.5;
+    }
+
+    .ant-row:nth-child(2) {
+      margin-bottom: @gutter * 0.4;
+    }
+
+    .detail-field {
+      padding: 0 @gutter * 0.25;
+      margin-bottom: @gutter * 0.5;
+      .label {
+        color: #68737d;
+        margin-bottom: @gutter * 0.4;
+      }
+      .value {
+        color: @darkTextColor;
+      }
+    }
+  }
+  .prefix-currency {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+
+    .prefix-value {
+      flex: 1;
+      background: @grey2;
+      text-align: center;
+      color: @darkTextColor;
+      padding: @gutter * 0.3;
+      border: 1px solid @borderColor;
+      border-right: 0px solid @borderColor;
+      border-radius: @borderRadious 0 0 @borderRadious;
+    }
+    .ant-input-number {
+      flex: 4;
+      border: 1px solid @borderColor;
+      border-radius: 0 @borderRadious @borderRadious 0;
+    }
+  }
+  .ant-picker {
+    width: 100%;
+  }
+  .ant-modal-footer {
+    border-top: 0;
+    padding: 0 @gutter @gutter;
+  }
+}

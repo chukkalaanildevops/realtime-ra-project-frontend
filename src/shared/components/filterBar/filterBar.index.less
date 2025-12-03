@@ -1,0 +1,73 @@
+@import '../../../styles/variables.less';
+
+.filter-bar-container {
+  padding: 1rem 0;
+
+  .back-btn-container {
+    display: flex;
+    flex: 1;
+    align-self: center;
+    justify-content: flex-start;
+  }
+
+  .menu-button {
+    color: @grey8;
+  }
+
+  .add-new-button {
+    background-color: @blue1;
+    color: @blue6;
+    border-color: @blue1;
+  }
+
+  .filter-icon {
+    background-color: @grey2;
+    padding: 5px;
+    font-size: 1.3rem;
+  }
+
+  .active-icon {
+    color: @blue6;
+    background-color: @blue1;
+    padding: 5px;
+    font-size: 1.3rem;
+  }
+}
+.tips-container {
+  background-color: @blue1;
+  border-radius: 4px;
+  padding: @gutter*0.5;
+  margin-bottom: @gutter*0.5;
+  .bulb-filled {
+    font-size: @gutter;
+    color: @blue6;
+    margin-right: @gutter*0.2;
+  }
+
+  .tips {
+    margin-top: @gutter*0.5;
+    margin-left: @gutter*0.25;
+    width: 100%;
+    &_container {
+      // width: 50%;
+      padding-top: 20px;
+    }
+    &_detail-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 75%;
+      .tips_detail {
+        display: flex;
+        justify-content: space-between;
+        width: 40%;
+        span {
+          padding-left: 5px;
+        }
+      }
+    }
+    .tip-date{
+      width: 30%;
+    }
+  }
+}

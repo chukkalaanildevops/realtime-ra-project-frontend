@@ -1,0 +1,30 @@
+@import '../../../../../../styles/variables.less';
+
+.add-employee-group-container {
+  display: block;
+  min-height: 100%;
+  background: @grey1;
+  padding: @gutter * 0.83;
+  border-radius: @borderRadius;
+  color: @primaryTextColor;
+
+  .title-h2 {
+    color: @primaryTextColor;
+    font-weight: 600;
+    font-size: 1.14em;
+    margin: @gutter * 0.5 0;
+  }
+  .form-action-btn-container {
+    text-align: right;
+    button {
+      padding: 0px @gutter * 1.75;
+      margin: 0px @gutter * 0.5;
+    }
+  }
+
+  .ant-select-loading {
+    .ant-select-selection-item {
+      display: none;
+    }
+  }
+}

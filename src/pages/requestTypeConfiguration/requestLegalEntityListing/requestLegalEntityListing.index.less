@@ -1,0 +1,38 @@
+@import '../../../styles/variables.less';
+
+.request-type-legal-entity-listing {
+  display: block;
+  padding: @gutter * 0.83;
+  background: @grey1;
+  border-radius: @borderRadius;
+  min-height: 100%;
+
+  .back-text {
+    color: @grey9;
+    font-weight: bold;
+  }
+  .ant-drawer {
+    .ant-drawer-content-wrapper {
+      top: 84px;
+      height: calc(100% - 84px);
+    }
+  }
+
+  .ant-modal-wrap {
+    position: absolute;
+    .add-entity-container {
+      .ant-modal-content {
+        .ant-modal-header {
+          padding: @gutter*0.42 @gutter*0.67;
+          background: @grey3;
+          border-radius: @borderRadius @borderRadius 0px 0px;
+
+          .ant-modal-title {
+            font-weight: 600;
+            color: @primaryTextColor;
+          }
+        }
+      }
+    }
+  }
+}

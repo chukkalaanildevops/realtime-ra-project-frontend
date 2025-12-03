@@ -1,0 +1,105 @@
+@import '../../../styles/variables.less';
+
+.request-expense-listing {
+  display: block;
+  min-height: 100%;
+  padding: @gutter * 0.83;
+  // padding: 10px 50px 50px;
+  background: @grey1;
+  border-radius: @borderRadius;
+  width: 100%;
+
+  .drawer-common-style {
+    .ant-drawer-content-wrapper {
+      top: 125px;
+      height: calc(100% - 125px);
+    }
+  }
+
+  .expense-detail-drawer {
+    .drawer-common-style;
+  }
+
+  .add-new-button {
+    background-color: @blue1;
+    color: @blue6;
+    border-color: @blue1;
+    margin-top: @gutter * 0.5;
+    margin-bottom: @gutter * 0.5;
+  }
+
+  .request-details-container {
+    background-color: @grey2;
+    padding: @gutter * 0.83;
+    border-radius: 4px;
+
+    .trip-detail-parent {
+      &.more-than-one-item {
+        .value {
+          max-height: 43px;
+        }
+      }
+
+      .value {
+        position: relative;
+
+        .more-trip-details-button {
+          padding: 0;
+          position: absolute;
+          right: 0;
+          z-index: 1;
+          bottom: 0;
+          margin: 0;
+          background: #f5f8fb;
+          display: inline;
+          height: unset;
+          width: unset;
+        }
+      }
+    }
+
+    .travel-flight-details,
+    .request-detail-drawer {
+      .drawer-common-style;
+    }
+
+    .label {
+      color: @grey8;
+      font-size: 14px;
+      overflow-wrap: break-word;
+    }
+
+    .value {
+      font-size: 14px;
+      color: @grey9;
+      margin-top: @gutter*0.4;
+      overflow-wrap: break-word;
+    }
+
+    .amount-container {
+      margin-top: 16px;
+      display: flex;
+    }
+    .amount-value {
+      margin-left: 16px;
+      width: 50%;
+      text-align: left;
+      color: @grey9;
+    }
+
+    .amount-label {
+      width: 25%;
+      text-align: right;
+      // margin-right: @gutter*0.4;
+    }
+
+    .itemCount {
+      margin-left: 4px;
+      color: @grey9;
+    }
+  }
+  .itemCount {
+    margin-left: 4px;
+    color: @grey9;
+  }
+}

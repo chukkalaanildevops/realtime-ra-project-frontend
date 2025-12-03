@@ -1,0 +1,202 @@
+@import '../../styles/variables.less';
+
+.approvals-container {
+  min-height: 100%;
+  display: block;
+
+  .load-more-button {
+    background: @grey2;
+    padding: @gutter * 0.16;
+    text-align: center;
+  }
+
+  .ant-tabs-tabpane {
+    height: 100%;
+    min-height: calc(100vh / 1.24) !important;
+  }
+
+  .detail-drawer {
+    .ant-drawer-content-wrapper {
+      top: 130px;
+      height: calc(100% - 130px);
+    }
+  }
+
+  .row {
+    height: 36px;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: @gutter * 0.5;
+    .col-1 {
+      display: flex;
+      flex: 1;
+      align-items: flex-end;
+
+      .expand-all-button {
+        margin-left: @gutter * 0.25;
+        margin-right: @gutter * 0.75;
+        height: auto;
+        font-size: 12px;
+
+        .anticon {
+          font-size: 12px;
+        }
+      }
+      .select-all-checkbox {
+        // margin-left: @gutter * 2.33;
+        margin-right: @gutter * 1.5;
+      }
+
+      .approve-all-button {
+        color: white;
+        background-color: @cyan6;
+      }
+    }
+    .col-2 {
+      display: flex;
+      flex: 1;
+      justify-content: flex-end;
+      align-items: flex-end;
+
+      .filter-toggle-button {
+        background-color: #f5f8fb;
+        padding: @gutter * 0.23;
+        font-size: 1.3rem;
+        border: none;
+      }
+    }
+  }
+
+  .data-filter-component {
+    margin-bottom: @gutter * 0.5;
+  }
+
+  .groups {
+    background-color: transparent;
+
+    .group {
+      border: 0;
+      border-radius: 4px;
+      margin-bottom: @gutter;
+      background-color: @grey2;
+
+      > .ant-collapse-header {
+        padding: 0px;
+        padding-left: @gutter * 2;
+
+        .ant-collapse-arrow {
+          top: 25%;
+        }
+      }
+
+      .subgroup {
+        border: 0;
+        border-radius: 4px;
+        padding: @gutter * 0.5 0;
+        background-color: white;
+        margin-bottom: @gutter * 0.75;
+
+        > .ant-collapse-header {
+          padding: 0px;
+          padding-left: @gutter * 1.75;
+
+          .ant-collapse-arrow {
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+
+  a.receipt-table-column,
+  a.remark-table-column {
+    color: @darkTextColor;
+    text-decoration: none;
+    svg {
+      color: @grey6;
+      margin-right: @gutter * 0.5;
+    }
+  }
+
+  .expense-claims-table,
+  .requests-table {
+    overflow-x: auto;
+    th:last-child,
+    td:last-child {
+      width: 125px;
+      .item-approval-buttons {
+        min-width: 80px;
+      }
+    }
+    .row-background-orange {
+      background-color: #fff5e6;
+    }
+    .row-background-red {
+      background-color: #ffe6e6;
+    }
+    .ant-table {
+      *::-webkit-scrollbar {
+        width: 0 !important;
+        height: 0 !important;
+      }
+    }
+    .ant-table-cell-fix-right {
+      background-color: transparent !important;
+    }
+    td {
+      background-color: transparent !important;
+    }
+  }
+  .border-red {
+    border-left: 3px solid #ff0000 !important;
+  }
+  .border-orange {
+    border-left: 3px solid #ffa500 !important;
+  }
+}
+
+.single-item-response-modal {
+  .ant-modal-content {
+    .ant-modal-body {
+      padding: @gutter * 1.25 @gutter * 1.25 0;
+      .modal-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: @gutter * 0.5;
+        span.anticon.anticon-exclamation-circle {
+          font-size: 22px;
+          margin-right: @gutter * 0.5;
+        }
+        .modal-title {
+          font-size: 16px;
+          color: rgba(0, 0, 0, 0.85);
+        }
+      }
+      .field {
+        // margin-left: @gutter * 1.5;
+        .message {
+          margin-bottom: @gutter * 0.25;
+          &.required {
+            &:before {
+              content: '*';
+              color: #ff4d4f;
+              margin-right: @gutter * 0.15;
+            }
+          }
+        }
+      }
+    }
+    .ant-modal-footer {
+      border-top: 0;
+      padding: @gutter @gutter * 1.25 @gutter * 1.25;
+    }
+  }
+}
+.single-item-response-modal,
+.bulk-item-response-modal {
+  .ant-modal-content {
+    .ant-modal-header {
+      background: #ebf1f8;
+    }
+  }
+}

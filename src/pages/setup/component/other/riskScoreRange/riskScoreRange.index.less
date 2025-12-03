@@ -1,0 +1,33 @@
+@import '../../../../../styles/variables.less';
+
+.risk-score-range-container {
+  padding: @gutter;
+  min-height: 100%;
+  background: @grey1;
+
+  .risk-score-range-actions-wrapper {
+   margin-top: 50px;
+
+   
+     .ant-btn-primary[disabled], .ant-btn-primary[disabled]:hover, .ant-btn-primary[disabled]:focus, .ant-btn-primary[disabled]:active {
+      background: #1890FF !important;
+      border-color: #1890FF !important;
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12) !important;
+      opacity: 0.5 !important;
+      span {
+        color: #fff !important;
+        font-weight: 400 !important;
+      }
+     }
+     .ant-btn-background-ghost.ant-btn-primary[disabled], .ant-btn-background-ghost.ant-btn-primary[disabled]:hover, .ant-btn-background-ghost.ant-btn-primary[disabled]:focus, .ant-btn-background-ghost.ant-btn-primary[disabled]:active {
+      color: #1890FF !important;
+      background: transparent !important;
+      border-color: #1890FF !important;
+      text-shadow: none !important;
+      span {
+        color: #1890FF !important;
+        font-weight: 400 !important;
+      }
+     }
+  }
+}

@@ -1,0 +1,91 @@
+@import '../../../styles/variables.less';
+
+.add-reference-object-container {
+  min-height: 100%;
+  padding: @gutter;
+  background: @grey1;
+
+  .title-h2 {
+    font-weight: 600;
+    font-size: 1.14rem;
+    margin: @gutter * 0.5 0;
+    color: @primaryTextColor;
+  }
+
+  .add-update-reference-object-form {
+    @media screen and (min-width: 1024px) {
+      width: 600px;
+    }
+
+    .max-5-scroll {
+      &.active {
+        height: 280px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        margin-bottom: @gutter*0.42;
+        // padding: @gutter*0.21 0;
+
+        scroll-snap-type: mandatory;
+        scroll-snap-points-y: repeat(280px);
+        scroll-snap-type: y mandatory;
+
+        .ant-form-item {
+          scroll-snap-align: start;
+        }
+      }
+    }
+    .ant-form-item-control {
+      .item-input {
+        width: calc(100% - 36px);
+        margin-right: @gutter * 0.5;
+      }
+      .extend {
+        width: 100% !important;
+        margin-right: 0 !important;
+      }
+      .dynamic-delete-button {
+        width: 24px;
+        color: @grey7;
+        cursor: pointer;
+        text-align: center;
+        font-size: 1.71rem;
+        transition: all 0.3s;
+      }
+      .dynamic-delete-button:hover {
+        // color: #777;
+        color: @grey8;
+      }
+      .dynamic-delete-button[disabled],
+      .dynamic-delete-button.disabled {
+        cursor: not-allowed;
+        pointer-events: none;
+        opacity: 0.5;
+      }
+    }
+
+    div[data-test='itemsList'] {
+      > .ant-form-item-control {
+        .ant-form-item-control-input {
+          width: 100%;
+          .ant-form-item-control-input-content {
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+          }
+        }
+      }
+    }
+
+    .buttons {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      .ant-btn {
+        padding: 0 @gutter * 1.5;
+      }
+      .ant-btn:first-child {
+        margin-right: @gutter;
+      }
+    }
+  }
+}

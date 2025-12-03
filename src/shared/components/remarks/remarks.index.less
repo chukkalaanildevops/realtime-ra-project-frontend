@@ -1,0 +1,94 @@
+@import '../../../styles/variables.less';
+
+span.anticon-message {
+  color: @grey6;
+}
+
+.remarks-container {
+  .remark-button-with-count {
+    border: none;
+    background-color: inherit;
+    color: inherit;
+    box-shadow: inherit;
+    padding: 4;
+    span.anticon-message {
+      transition: color 0.3s ease-out 0.1s;
+    }
+
+    &:hover {
+      span.anticon-message {
+        color: @primaryColor;
+      }
+    }
+  }
+}
+
+.remark-modal {
+  .ant-modal-header {
+    background-color: @grey3;
+
+    .ant-modal-title {
+      color: @grey9;
+      // font-weight: 600;
+      font-size: 18px;
+    }
+  }
+
+  .ant-modal-close-icon {
+    color: @grey9;
+  }
+}
+
+.remark-div {
+  .remarks {
+    max-height: 500px;
+    overflow-y: auto;
+  }
+
+  .ant-form-item-control {
+    padding: 24px !important;
+  }
+  #remark {
+    padding: 0 !important;
+  }
+
+  .remark-item-container {
+    &:not(:last-child) {
+      border-bottom: 1px solid @grey3;
+    }
+    .container {
+      padding: @gutter;
+      display: flex;
+      flex-direction: row;
+
+      img {
+        width: 30px;
+        height: 30px;
+      }
+
+      .info-container {
+        padding-left: 12px;
+        padding-right: 12px;
+
+        > div:not(:first-child) {
+          padding-top: 8px;
+        }
+
+        .user-name {
+          color: @grey8;
+        }
+        .date-time {
+          color: @grey7;
+          font-size: 12px;
+        }
+        .comment {
+          color: @grey9;
+        }
+      }
+    }
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid @grey1;
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "TITLE_REQUIRED": "Title required",
+  "CODE_REQUIRED": "Code required",
+  "AVAILABLE_AFTER_REQUIRED": "Available after required",
+  "BENEFIT_ENTITLEMENT_PERIOD_REQUIRED": "Benefit entitlement period required",
+  "MAXIMUM_CLAIMS_PER_ENTITLEMENT_PERIOD_REQUIRED": "Maximum claims per entitlement period required",
+  "PRORATED_BY_REQUIRED": "Prorated by is required",
+  "TAX_PERCENTAGE_REQUIRED": "Tax percentage required",
+  "DEDUCTIBLE_COMPONENT_REQUIRED": "Deductible component required",
+  "PRORATION_REQUIRED": "Proration component required",
+  "CAN_CLAIM_FOR_REQUIRED": "Can claim for required",
+  "COST_CENTRE_REQUIRED": "Cost centre required",
+  "GRACE_PERIOD_REQUIRED": "Grace period required",
+  "WAGE_TYPE_REQUIRED": "Wage type required",
+  "GL_ACCOUNT_REQUIRED": "GL account required",
+  "PERIOD_UNIT_REQUIRED": "Period unit required",
+  "LEGAL_ENTITY_REQUIRED": "Legal entity required",
+  "DAYS_VALIDATION": "Days cannot be more than 365 days",
+  "MONTH_VALIDATION": "Month cannot be more than 12 months",
+  "TAX_PERCENTAGE_AS_OF_DATE_REQUIRED": "Tax Percentage As Of Date Required"
+}

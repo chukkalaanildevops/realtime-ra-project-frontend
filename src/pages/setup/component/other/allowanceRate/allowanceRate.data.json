@@ -1,0 +1,15 @@
+{
+    "COMPANY_REQUIRED": "Company required",
+    "EFFECTIVE_DATE_REQUIRED":"Effective Date required",
+    "DESTINATION_REQUIRED":"Destination required",
+    "TITLE_REQUIRED":"Title required",
+    "AMOUNT_REQUIRED":"Amount required",
+    "INVALID_AMOUNT":"Invalid amount",
+    "ELIGIBILITY_REQUIRED":"Eligibility required",
+    "CURRENCY_REQUIRED":"Currency required",
+    "RECEIPT_MANDATORY_STATUS_REQUIRED":"Receipt Mandatory status required",
+    "ALLOW_UPDATE_STATUS_REQUIRED":"Allow Update status required",
+    "HALF_DAY_CUT_OFF_STATUS_REQUIRED":"Half Day Cut Off status required",
+    "PAY_COMPONENT_REQUIRED":"Pay Component required",
+    "GL_ACCOUNT_REQUIRED":"GL Account required"
+  }

@@ -1,0 +1,74 @@
+@import '../../../../../styles/variables.less';
+
+.expense-type-config-details-container {
+  & .property-container {
+    margin: @gutter * 0.33 0;
+    & span.text-label {
+      display: block;
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 1.57rem;
+      word-break: break-word;
+
+      &:not(.disable.non-interactive) {
+        color: @primaryTextColor;
+      }
+      & .anticon {
+        margin-right: @gutter * 0.25;
+      }
+    }
+    & span.text-content {
+      display: block;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1rem;
+      line-height: 1.57rem;
+      color: @primaryTextColor;
+      word-break: break-word;
+
+      & div {
+        margin-left: @gutter * 0.83;
+        & .anticon {
+          margin-right: @gutter * 0.25;
+        }
+      }
+
+      & span.text-label {
+        font-weight: normal;
+
+        &:not(.disable.non-interactive) {
+          color: @primaryTextColor;
+        }
+        & .anticon {
+          margin-right: @gutter * 0.25;
+        }
+      }
+    }
+  }
+
+  & .instruction-title .mileage-rate {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.57rem;
+    color: @primaryTextColor;
+    // margin-top: @gutter * 1.83;
+  }
+  & .mileage-rate {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.57rem;
+    color: @primaryTextColor;
+  }
+
+  & .instruction-container {
+    border: 1px solid @borderColor;
+    box-sizing: border-box;
+    border-radius: @borderRadious;
+    padding: @gutter * 0.42;
+  }
+  .mileage-rate-row{
+    padding-bottom: 20px;
+  }
+}

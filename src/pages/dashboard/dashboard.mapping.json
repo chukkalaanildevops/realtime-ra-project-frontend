@@ -1,0 +1,34 @@
+{
+  "en": {
+    "DRAFT": "Drafts",
+    "SUBMITTED": "Submitted",
+    "APPROVALS": "Approvals",
+    "REPORTS": "Reports",
+    "ADMIN": "Admin",
+    "SETUP": "Setup",
+    "NEW_EXPENSE": "New Expense",
+    "NEW_RECEIPT": "New Receipt",
+    "NEW_REQUEST": "New Request",
+    "CLAIM_BENEFITS": "Claim Benefit",
+    "MY_DRAFTS": "My Drafts",
+    "PENDING_APPROVAL": "Pending Approval",
+    "DASHBOARD_TEXT": "How can I help you today",
+    "SEARCH_TEXT": "Type here to search your expenses, travel requests, claims, receipts, drafts"
+  },
+  "hi": {
+    "DRAFT": "ड्राफ्ट",
+    "SUBMITTED": "प्रस्तुत",
+    "APPROVALS": "स्वीकृति",
+    "REPORTS": "रिपोर्ट",
+    "ADMIN": "व्यवस्थापक",
+    "SETUP": "Setup"
+  },
+  "mr": {
+    "DRAFT": "मसुदे",
+    "SUBMITTED": "सादर केला",
+    "APPROVALS": "मंजूरी",
+    "REPORTS": "अहवाल",
+    "ADMIN": "प्रशासन",
+    "SETUP": "Setup"
+  }
+}

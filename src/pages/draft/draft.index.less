@@ -1,0 +1,138 @@
+@import '../../styles/variables.less';
+
+.drafts-container {
+  height: 100%;
+  .ant-drawer-content-wrapper {
+    top: 130px;
+    height: calc(100% - 130px);
+  }
+
+  .skeleton-container {
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    padding: 40px;
+  }
+
+  .empty-view-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .textContainer {
+    margin-top: 8%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .noExpenseText {
+    color: #4e555c;
+    font-size: 20px;
+    line-height: 28px;
+    font-family: Poppins;
+  }
+
+  .addText {
+    color: #4e555c;
+    font-size: 20px;
+    line-height: 28px;
+    margin-top: 28px;
+    font-weight: bold;
+  }
+
+  .menuItemContainer {
+    height: 100px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    flex-direction: column;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+
+  .titleText {
+    color: #4e555c;
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 12px;
+  }
+
+  .iconStyle {
+    color: #1890ff;
+    font-size: 24px;
+  }
+  .icons {
+    color: @grey9;
+    font-size: 16px;
+    margin-right: @gutter*0.25;
+
+    &.disabled {
+      color: @grey6;
+    }
+  }
+
+  .itemCount {
+    margin-left: 4px;
+    color: @grey9;
+    &.disabled {
+      color: @grey6;
+    }
+  }
+
+  .select-all-container {
+    padding: 0;
+    padding-left: 13px;
+    padding-bottom: @gutter * 0.75;
+
+    label.ant-checkbox-wrapper {
+      .ant-checkbox + span {
+        padding-right: @gutter * 0.1;
+      }
+    }
+
+    .selected-item-count {
+      color: @grey6;
+    }
+  }
+
+  .draft-expense-container {
+    .ant-drawer.expens-detail-drawer {
+      .ant-drawer-body {
+        padding-top: 0;
+      }
+    }
+  }
+
+  .ant-drawer.request-detail-drawer {
+    .ant-drawer-body {
+      padding-top: 0;
+    }
+  }
+}
+.expense-claims-table {
+  overflow-x: auto;
+  .ant-table-tbody {
+    .row-background-orange {
+      td {
+        background:  #fff5e6 !important;
+        font-size: 1rem; //14px
+      }
+    }
+    .row-background-red {
+      td {
+        background:  #ffe6e6 !important;
+        font-size: 1rem; //14px
+      }
+    }
+  }
+  .violationIcon-container {
+    display: flex;
+    font-weight: 600;
+    align-items: center;
+  }
+}

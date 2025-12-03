@@ -1,0 +1,8 @@
+{
+  "BASE_CURRENCY_REQUIRED": "Base currency required",
+  "TARGET_CURRENCY_REQUIRED": "Target currency required",
+  "CONVERSION_RATE_REQUIRED": "Conversion rate required",
+  "AS_OF_DATE_REQUIRED": "As of date required",
+  "SAME_CURRENCY": "Base and Target currency should not be same",
+  "INVALID_RATE": "Invalid rate"
+}

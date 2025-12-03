@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "Total Settled Amount",
+    "amount": "$ 4305"
+  },
+  {
+    "id": 2,
+    "title": "Total Pending Amount",
+    "amount": "$ 7685"
+  },
+  {
+    "id": 3,
+    "title": "Total Approved Amount",
+    "amount": "$ 6605"
+  },
+  {
+    "id": 4,
+    "title": "Total Rejetced Amount",
+    "amount": "$ 5053"
+  }
+]

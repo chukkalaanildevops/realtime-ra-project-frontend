@@ -1,0 +1,93 @@
+@import '../../../../../styles/variables.less';
+.admin-delegate-container {
+  min-height: 100%;
+  padding: @gutter * 0.75;
+  background-color: white;
+
+  .filter-button {
+    border: 0;
+    color: @grey7;
+    border-radius: 4px;
+    background-color: @grey2;
+    margin-right: @gutter * 0.6;
+  }
+  .add-new-button {
+    color: @primaryColor;
+    border-color: @blue1;
+    background-color: @blue1;
+  }
+  // }
+
+  .delegations {
+    background-color: white;
+
+    .action-row {
+      display: flex;
+      flex-direction: row-reverse;
+
+      .filter-toggle-button {
+        margin-left: 7.5px;
+        margin-right: 7.5px;
+        margin-top: 14px;
+      }
+    }
+  }
+
+  .delegation-drawer {
+    .ant-drawer-content-wrapper {
+      top: 80px;
+      height: calc(100% - 80px);
+    }
+
+    .detail-field {
+      padding: 0 @gutter * 0.25;
+      margin-bottom: @gutter * 0.5;
+      .label {
+        color: #68737d;
+        margin-bottom: @gutter * 0.4;
+      }
+      .value {
+        color: @darkTextColor;
+      }
+    }
+    .buttons {
+      display: flex;
+      justify-content: flex-end;
+      .ant-btn {
+        &.inactive {
+          pointer-events: none;
+        }
+        &:first-child {
+          margin-right: @gutter * 0.85;
+        }
+      }
+    }
+  }
+
+  .approve {
+    &.APPRVD {
+      background-color: @grey7;
+    }
+    &.REJCTD {
+      background-color: @grey5;
+    }
+    &.PENDNG {
+      background-color: #13c2c2;
+    }
+    .disabled {
+      color: #fff !important;
+    }
+  }
+
+  .reject {
+    &.APPRVD {
+      background-color: @grey5;
+    }
+    &.REJCTD {
+      background-color: @grey7;
+    }
+    &.PENDNG {
+      background-color: #ff1744;
+    }
+  }
+}

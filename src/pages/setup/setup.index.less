@@ -1,0 +1,43 @@
+@import '../../styles/variables.less';
+
+.admin-container {
+  // padding: @gutter*1.33 @gutter*0.33;
+  padding:@gutter*3;
+  height: 100%;
+  background: @grey1;
+  border-radius: @borderRadious;
+  align-content: baseline;
+  margin: 0 !important;
+
+  & .options-container {
+    height: 250px;
+    max-height: 250px;
+
+    .options-header {
+      font-size: 1.43rem;
+      line-height: 2rem;
+      color: @darkTextColor;
+      // margin-bottom: @gutter * 0.83;
+      text-transform: uppercase;
+    }
+    & .options {
+      font-size: 1rem;
+      line-height: 1.57rem;
+      color: @primaryTextColor;
+      // min-height: 22px;
+      // margin-top: @gutter * 0.19;
+      // margin-bottom: @gutter * 0.42;
+      margin-top: @gutter;
+      // margin-bottom: @gutter;
+
+      & .custom-nav-link {
+        // color: @primaryTextColor;
+        color: @blue6;
+        &:hover {
+          color: @linkColor;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

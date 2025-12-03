@@ -1,0 +1,286 @@
+@import '../../../styles/variables.less';
+
+.menu-drawer-container {
+  .menu-sider {
+    height: 100%;
+    background-color: @sidebarBackgroundColor;
+
+    .ant-layout-sider-children {
+      position: relative;
+    }
+
+    .user-container {
+      display: flex;
+      cursor: pointer;
+      padding: @gutter @gutter*0.5 @gutter * 0.5;
+      margin-bottom: @gutter*0.5;
+      flex-flow: column;
+      align-items: center;
+
+      .user-avatar {
+        width: 48px;
+        height: 48px;
+        margin-bottom: @gutter * 0.5;
+        &.delegate {
+          border: 3px solid #fffbe6;
+        }
+      }
+
+      .username {
+        width: 100%;
+        padding: 0 @gutter 0.5;
+        text-overflow: ellipsis;
+        color: @sidebarTextColor;
+        &.hidden {
+          display: none;
+        }
+      }
+    }
+
+    .button-container {
+      text-align: center;
+      margin-bottom: @gutter * 0.75;
+      padding-top: @gutter*0.4;
+      padding-bottom: @gutter*0.4;
+    }
+    .ant-menu-submenu {
+      padding-left: 7px !important;
+
+      // background-color: #68737d;
+    }
+    .app-menu {
+      border-right: 0px;
+      margin-bottom: @gutter * 4;
+      background-color: @sidebarBackgroundColor;
+
+      max-height: 76%;
+      overflow: auto;
+
+      .app-menu-item {
+        height: 48px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        line-height: 48px;
+        padding-left: @gutter;
+        color: @sidebarTextColor;
+
+        &:hover {
+          background-color: rgba(white, 0.1);
+        }
+      }
+
+      .ant-menu-item-selected {
+        background-color: #68737d !important;
+      }
+    }
+
+    .branding {
+      text-align: center;
+      position: absolute;
+      width: 100%;
+      display: inline-block;
+      bottom: 0px;
+      background: @sidebarBackgroundColor;
+      img.image {
+        width: 120px;
+      }
+      img.collapsed.image {
+        width: 40px;
+      }
+    }
+
+    .ant-layout-sider-trigger {
+      background-color: inherit;
+    }
+
+    // Collapsed sider styles
+    &.ant-layout-sider-collapsed {
+      .button-container {
+        margin-bottom: @gutter;
+      }
+
+      .app-menu {
+        .app-menu-item {
+          display: flex;
+          height: 60px;
+          margin-top: 0px;
+          margin-bottom: 0px;
+          align-items: center;
+          // padding: 0 28px !important;
+          justify-content: center;
+          padding: 0 !important;
+          .benefit-icon {
+            background-color: #ff8556;
+          }
+          .menu-item-icon {
+            display: flex;
+            align-items: center;
+
+            &.material-menu-icons {
+              margin: 0;
+              width: 26px !important;
+              height: 26px !important;
+            }
+
+            svg {
+              width: 24px;
+              height: 24px;
+              transition: all 0.1s ease-in;
+            }
+          }
+
+          .menu-item-title {
+            padding: 0px;
+            display: none !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.admin-submenu {
+  background-color: #152535 !important;
+  // left: 190px !important;
+  // top: 439px !important;
+
+  .submenu-item-selected {
+    background-color: #68737d !important;
+  }
+  .menu-item-title {
+    color: #f5f8fb !important ;
+  }
+  .ant-menu-item {
+    &:hover {
+      background-color: rgba(white, 0.1);
+    }
+  }
+}
+.users-submenu {
+  // color: #1890ff;
+  // .ant-menu-submenu-arrow::before,
+  // .ant-menu-submenu-arrow::after {
+  //   background: #1890ff !important;
+  // }
+  .ant-menu-item {
+    // padding-left: 12px !important;
+    width: 180px !important;
+    &.current-user {
+      background-color: #e6f7ff;
+      color: #1890ff;
+    }
+    &.delegate-user {
+      background-color: #fffbe6;
+    }
+    &.not-selected {
+      background-color: #fff !important;
+      color: #68737d !important;
+    }
+  }
+}
+.sidebar-add-item-menu,
+.sidebar-user-profile-menu {
+  border: 0;
+  .ant-menu-item {
+    padding: 0 @gutter * 0.417;
+    &:hover {
+      background-color: #e6f7ff;
+    }
+
+    .material-menu-icons {
+      border-radius: 50%;
+      width: 24px !important;
+      height: 24px !important;
+      padding: 4px;
+    }
+
+    &.ADD_NEW_EXPENSE .material-menu-icons {
+      background-color: @blue3;
+      color: @grey1 !important;
+    }
+
+    &.ADD_NEW_REQUEST .material-menu-icons {
+      background-color: @green5;
+      color: @grey1 !important;
+    }
+
+    &.ADD_NEW_RECEIPT .material-menu-icons {
+      background-color: @orange3;
+      color: @grey1 !important;
+    }
+    &.ADD_NEW_BENEFIT .material-menu-icons {
+      background-color: #fe9b75;
+      color: @grey1 !important;
+    }
+  }
+  .ant-menu-submenu .ant-menu-submenu-title {
+    padding: 0 @gutter * 0.417;
+  }
+}
+
+.logout-button-container {
+  text-align: center;
+  padding: @gutter * 0.25 @gutter * 0.25 0;
+  .logout-button {
+    color: @primaryColor;
+    border-color: @primaryColor;
+    svg {
+      width: 20px !important;
+      height: 20px !important;
+      transition: all 0.1s ease-in;
+      vertical-align: middle;
+    }
+  }
+}
+
+.material-menu-icons {
+  // width: 16px !important;
+  // height: 16px !important;
+  // transition: all 0.1s ease-in;
+  // vertical-align: middle;
+  // margin: 0 10px 0 0;
+
+  width: 20px !important;
+  height: 20px !important;
+  transition: all 0.1s ease-in;
+  vertical-align: middle;
+  margin: 0 10px 0 0;
+  pointer-events: none;
+}
+
+// .ant-menu-item {
+//   // padding-left: 12px !important;
+//   // width: 160px !important;
+//   &.current-user {
+//     background-color: #e6f7ff;
+//     color: #1890ff;
+//   }
+//   &.delegate-user {
+//     background-color: #fffbe6;
+//   }
+//   &.not-selected {
+//     background-color: #fff !important;
+//     color: #68737d !important;
+//   }
+// }
+
+.profile-icon {
+  &.anticon svg {
+    font-size: 16px;
+    margin-top: 80px;
+    margin-left: -20px;
+    color: #fff;
+    background-color: #faad14;
+    border-radius: 20px;
+    padding: 2px;
+  }
+}
+
+.btn-switch-user {
+  padding: 0;
+  border: none;
+
+  span {
+    margin-left: 0 !important;
+  }
+}

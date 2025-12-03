@@ -1,0 +1,30 @@
+export const BENEFIT_TYPE_CONFIG_ACTION_TYPES = {
+  SAVE_DEDUCTIBLE_COMPONENT:
+    'BENEFIT_TYPE_CONFIG_ACTION_TYPES.SAVE_DEDUCTIBLE_COMPONENT',
+  SAVE_ENTITLEMENT_PERIOD:
+    'BENEFIT_TYPE_CONFIG_ACTION_TYPES.SAVE_ENTITLEMENT_PERIOD',
+  SAVE_FREQUENCY_UNIT: 'BENEFIT_TYPE_CONFIG_ACTION_TYPES.SAVE_FREQUENCY_UNIT',
+  SAVE_PRORATION: 'BENEFIT_TYPE_CONFIG_ACTION_TYPES.SAVE_PRORATION',
+};
+
+// LOADERS //
+
+export const saveDeductibleComponent = (data: any[]) => ({
+  type: BENEFIT_TYPE_CONFIG_ACTION_TYPES.SAVE_DEDUCTIBLE_COMPONENT,
+  payload: data,
+});
+
+export const saveEntitlementPeriod = (data: any[]) => ({
+  type: BENEFIT_TYPE_CONFIG_ACTION_TYPES.SAVE_ENTITLEMENT_PERIOD,
+  payload: data,
+});
+
+export const saveFrequencyUnit = (data: any[]) => ({
+  type: BENEFIT_TYPE_CONFIG_ACTION_TYPES.SAVE_FREQUENCY_UNIT,
+  payload: data,
+});
+
+export const saveProration = (data: any[]) => ({
+  type: BENEFIT_TYPE_CONFIG_ACTION_TYPES.SAVE_PRORATION,
+  payload: data,
+});

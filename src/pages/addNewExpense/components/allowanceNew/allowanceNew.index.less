@@ -1,0 +1,227 @@
+@import '../../../../styles/variables.less';
+
+.allowance-form-section {
+  .address {
+    font-size: 0.86rem;
+  }
+
+  .button-container {
+    justify-content: flex-end;
+    margin-top: @gutter*1.67 !important; //40px
+    width: 100%;
+  }
+
+  .button-container-update {
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  .ant-form-item {
+    margin-bottom: 0;
+
+    .ant-form-item-label {
+      padding-bottom: 0;
+
+      label {
+        min-height: 32px;
+        height: auto;
+
+        //uncomment belo code to truncate text
+        // height: 24px !important;
+        // align-items: flex-start;
+        overflow: hidden;
+        // min-height: auto;
+        // margin-bottom: 8px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 100%;
+        display: inline-block;
+
+        .default-value-btn-parent {
+          width: 95%;
+          display: inline-flex;
+          flex: 1 1;
+          flex-direction: row;
+
+          span {
+            display: flex;
+            flex: 1 1 50%;
+            flex-direction: column;
+          }
+
+          .default-value-link-btn {
+            display: inline-flex;
+            flex: 1;
+            padding: 0;
+            margin: 0;
+            span {
+              color: #1890ff;
+              text-decoration: underline;
+              text-decoration-color: #1890ff;
+            }
+          }
+        }
+      }
+    }
+
+    &.supporting-documents {
+      max-width: 350px;
+      display: flex;
+      justify-content: space-between;
+
+      .ant-form-item-label {
+        display: inline-flex;
+        flex: 3;
+      }
+      .ant-form-item-control {
+        display: inline-flex;
+        flex: 1;
+
+        button {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  .tripDatesDifference {
+    position: relative;
+    top: 37px;
+  }
+
+  .receipt-number-row-container {
+    margin-left: @gutter / 3;
+  }
+
+  // .general-fields-section {
+  //   width: 70vw;
+  // }
+
+  .ant-table-content {
+    overflow: auto auto !important;
+  }
+
+  .ant-drawer-content-wrapper {
+    @dTop: 130px;
+    top: @dTop;
+    height: calc(100% - @dTop);
+  }
+
+  .ant-form-item-control {
+    width: 100%;
+  }
+
+  .drawer-form {
+    .ant-row-space-between {
+      .ant-col-12 {
+        .ant-form-vertical {
+          .ant-space-vertical {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .amount-section {
+    border-left: 1px solid @grey6;
+    //min-height: 190px;
+    height: 100%;
+    padding: 25px 0;
+
+    // comment below code if you dont want amount in vertically middle align
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // flex: 1;
+    // height: 100%;
+
+    .lhs-label {
+      text-align: right;
+      // padding-right: 30px;
+    }
+
+    .show-error .customised-amount-component {
+      color: @errorColor;
+    }
+    .show-warning .customised-amount-component {
+      color: @warningColor;
+    }
+
+    .customised-amount-component {
+      text-align: right;
+      padding-right: @gutter * 0.42;
+    }
+  }
+  .pac-target-input {
+    width: 100%;
+    border: 1px solid #d9d9d9;
+    padding: 0 11px;
+    border-radius: 4px;
+  }
+
+  .form-receipt-container {
+    margin: auto;
+    width: 100%;
+
+    .supporting-documents {
+      flex-direction: row;
+    }
+  }
+
+  .general-fields-section {
+    position: relative;
+    background: @grey2;
+    border-radius: 0px @borderRadious @borderRadious @borderRadious;
+    .collapsable-icon-container {
+      display: block;
+      position: absolute;
+      bottom: -10px;
+      left: calc(50% - 32px);
+      background: #f5f8fb;
+      border-radius: 50%;
+      height: 24px;
+      width: 24px;
+      text-align: center;
+      padding: 0;
+      box-shadow: inset 0px -1px 0px #d9d9d9;
+
+      button {
+        width: auto;
+        height: auto;
+        padding: 0;
+        font-size: 1rem;
+        border-radius: unset;
+      }
+    }
+
+    // .ant-row{
+    // slide effect(shutter effect)
+    // overflow: hidden;
+    .custom-field-container {
+      display: block;
+      transition: height 0.3s linear;
+      height: unset;
+      overflow: hidden;
+      // slide effect(shutter effect)
+      transition: margin 0.5s ease-in;
+
+      &.show-custom-fields {
+        height: auto;
+        // slide effect(shutter effect)
+        // margin: 0 0 0 0;
+      }
+
+      &.hide-custom-fields {
+        height: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        // slide effect(shutter effect)
+        // height: auto;
+        // padding: 0 !important;
+        // margin: -80vh 0 0 0;
+      }
+    }
+    // }
+  }
+}

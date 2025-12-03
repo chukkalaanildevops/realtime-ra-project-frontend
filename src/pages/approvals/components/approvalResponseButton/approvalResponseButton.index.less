@@ -1,0 +1,113 @@
+@import '../../../../styles/variables.less';
+
+// Single Item Button Styling
+
+.item-approval-buttons {
+  // text-align: right;
+  padding-right: @gutter * 0.25;
+}
+
+.single-item-approval-button,
+.single-item-rejection-button {
+  border: 0;
+  svg {
+    width: 13px;
+    height: 13px;
+  }
+}
+.single-item-approval-button {
+  margin-right: @gutter * 0.75;
+  @media screen and (max-width: 1199px) {
+    margin-right: @gutter * 0.33;
+  }
+}
+
+.error-text {
+  color: #f5222d;
+}
+// Grouped Item Button Styling
+
+.approve-item-button,
+.reject-item-button {
+  margin-right: @gutter * 0.5;
+  svg {
+    width: 13px;
+    height: 13px;
+  }
+}
+
+.approve-item-button {
+  &.filled {
+    color: white;
+    background-color: @cyan6;
+    &[disabled] {
+      background-color: @grey6 !important;
+      opacity: 0.6;
+      * {
+        color: white !important;
+      }
+    }
+  }
+
+  &.outlined {
+    color: @cyan6;
+    &[disabled] {
+      border-color: @grey6 !important;
+      opacity: 0.6;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    margin-right: @gutter;
+  }
+}
+
+.reject-item-button {
+  &.filled {
+    color: white;
+    background-color: @red6;
+
+    &[disabled] {
+      background-color: @grey6 !important;
+      opacity: 0.6;
+      * {
+        color: white !important;
+      }
+    }
+  }
+
+  &.outlined {
+    color: @red6;
+    &[disabled] {
+      border-color: @grey6 !important;
+      opacity: 0.6;
+    }
+  }
+
+  svg {
+    stroke-width: 2;
+  }
+}
+.approval-risk-container {
+  padding: 10px;
+  margin-bottom: 20px;
+  color: #68737d;
+  &__risk-score {
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  &__risk-criteria-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+  }
+  &__risk-criteria-title {
+    padding-bottom: 5px;
+    font-weight: 600;
+  }
+  &__risk-criteria-data {
+    padding-left: 15px;
+  }
+}

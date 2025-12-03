@@ -1,0 +1,15 @@
+@import '../../../styles/variables.less';
+.inbound-past-job-execution-logs-container {
+  background-color: @grey1;
+  padding: @gutter;
+
+  .past-job-execution-timeline {
+    width: 60%;
+
+    .ant-timeline-item > .ant-timeline-item-content {
+      .stage-heading {
+        font-weight: bold;
+      }
+    }
+  }
+}

@@ -1,0 +1,149 @@
+@import '../../../../../styles/variables.less';
+
+.form-receipt-detail-container {
+  max-width: 350px;
+  margin-left: 20%;
+
+  .detail-field {
+    margin-bottom: @gutter !important;
+  }
+
+  .preview-upload-container {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    margin-bottom: 15px;
+    overflow: hidden;
+
+    .no-receipt {
+      display: flex;
+      flex: 1;
+      height: 100%;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .inner-preview {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: #fafafa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .file-conatiner {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          max-height: 100%;
+          max-width: 100%;
+        }
+      }
+
+      &:hover {
+        .action-btn-container {
+          opacity: 1;
+        }
+      }
+      .action-btn-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: #00000099;
+        // display: none;
+        display: flex;
+        flex: 1;
+        opacity: 0;
+        pointer-events: all;
+        justify-content: space-evenly;
+        align-items: center;
+        transition: opacity 0.3s linear 0s;
+
+        button {
+          color: @grey1;
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  .supporting-doc-uploaded-list {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 0 1%;
+    overflow: hidden;
+    max-height: 620px;
+    overflow-y: auto;
+
+    .file-info {
+      position: relative;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      margin: 4px 0;
+
+      .file-icon {
+        margin-right: 5px;
+        vertical-align: super;
+      }
+      .file-name {
+        max-width: 85%;
+        overflow: hidden;
+        display: inline-block;
+        text-overflow: ellipsis;
+      }
+      .file-delete {
+        position: absolute;
+        padding: 0;
+        margin: 0;
+        height: auto;
+        width: auto;
+        right: 0;
+        top: 0;
+        background: @grey1;
+        z-index: unset;
+      }
+    }
+  }
+
+  .image-previewer-model {
+    height: 90%; //600px;
+    width: auto !important;
+    overflow: hidden;
+    transform: none !important;
+    transform-origin: unset !important;
+    margin: 0 2%;
+
+    .ant-modal-content {
+      height: 100%;
+      width: 100%;
+
+      .ant-modal-body {
+        height: 90%;
+        width: 100%;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+    }
+  }
+}

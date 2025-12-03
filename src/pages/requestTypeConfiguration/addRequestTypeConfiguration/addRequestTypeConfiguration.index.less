@@ -1,0 +1,27 @@
+@import '../../../styles/variables.less';
+
+.request-type-container {
+  @marginBottom: @gutter * 3.75;
+  border: unset;
+  margin-bottom: @marginBottom;
+  min-height: calc(100% - @marginBottom);
+
+  .tab-footer {
+    position: absolute;
+    bottom: 60px;
+    left: 0px;
+    width: 100%;
+    text-align: right;
+    padding: @gutter * 0.67 @gutter * 2;
+    background: @footerBackgroundColor;
+    box-shadow: @boxShadow;
+  }
+
+  .ant-tabs {
+    .ant-tabs-content {
+      .ant-tabs-tabpane {
+        min-height: calc(100vh / 1.35);
+      }
+    }
+  }
+}

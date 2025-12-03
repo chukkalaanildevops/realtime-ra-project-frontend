@@ -1,0 +1,139 @@
+@import '../../../styles/variables.less';
+
+// .receipt-gallery-component {
+// }
+
+.receipt-gallery-modal {
+  .ant-modal-content {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    .ant-modal-body {
+      //   height: 80%;
+      height: 95%;
+      overflow: auto;
+      .receipt-confirmation {
+        height: 95%;
+
+        h4 {
+          font-size: 1.43rem;
+          padding: 0 @gutter * 0.42;
+        }
+
+        .con-container {
+          display: flex;
+          flex-direction: row;
+          height: 90%;
+          flex: 1;
+          min-height: 550px;
+          align-items: center;
+        }
+
+        .img-preview {
+          display: flex;
+          flex: 1;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+          overflow: hidden;
+
+          img {
+            width: 80%;
+          }
+        }
+        .option-container {
+          display: flex;
+          flex: 1.3;
+          flex-direction: column;
+          padding: 0 @gutter*0.83;
+        }
+
+        label.ant-checkbox-wrapper {
+          display: block;
+          margin: @gutter*1.04 0 0 @gutter*0.42 !important;
+          font-size: 1.14rem;
+
+          span.label-txt {
+            display: inline-block;
+            min-width: 25%;
+          }
+
+          span.old-val {
+            display: inline-block;
+            width: 30%;
+            text-align: center;
+            text-decoration: line-through;
+            margin-left: 0;
+            border: 1px solid @borderColor;
+            margin-top: @gutter*0.83;
+            border-radius: @borderRadious;
+          }
+
+          span.new-val {
+            display: inline-block;
+            width: 30%;
+            text-align: center;
+            margin-left: 0;
+            border: 1px solid @borderColor;
+            margin-top: @gutter*0.83;
+            border-radius: @borderRadious;
+          }
+          @media only screen and (max-width: 1150px) {
+            span.label-txt {
+              width: 80%;
+              min-width: unset;
+            }
+
+            span.old-val {
+              width: 45%;
+            }
+
+            span.new-val {
+              width: 45%;
+            }
+          }
+        }
+
+        .save-btn {
+          display: block;
+          text-align: center;
+          margin: @gutter*2.08 0;
+
+          button {
+            min-width: 150px;
+          }
+        }
+
+        @media screen and (max-width: 786px) {
+          .con-container {
+            display: block;
+            width: auto;
+            flex: none;
+          }
+          .img-preview {
+            display: block;
+            width: auto;
+            flex: none;
+            text-align: center;
+            max-height: 450px;
+            max-width: 100%;
+          }
+          .option-container {
+            display: block;
+            width: 100%;
+            flex: none;
+          }
+        }
+      }
+
+      .receipt-gallery-container {
+        .pagination-container {
+          display: block;
+          width: 100%;
+          text-align: right;
+        }
+      }
+    }
+  }
+}

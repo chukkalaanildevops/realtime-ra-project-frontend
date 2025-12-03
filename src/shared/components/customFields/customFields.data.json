@@ -1,0 +1,28 @@
+{
+  "vaidationErrors": {
+    "title": {
+      "required": "Title is required",
+      "unique": "Field label value must be unique"
+    },
+    "precision": {
+      "required": "Precision is required"
+    },
+    "source": {
+      "required": "Source is required"
+    },
+    "range_max": {
+      "maxGreaterMin": "Maximum value should be greater than minimum value"
+    },
+    "newDD": {
+      "title": {
+        "required": "Title is required"
+      },
+      "code": {
+        "required": "Code is required"
+      },
+      "itemVal": {
+        "required": "Please enter item value or delete."
+      }
+    }
+  }
+}

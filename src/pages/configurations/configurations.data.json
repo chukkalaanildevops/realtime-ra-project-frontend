@@ -1,0 +1,10 @@
+{
+  "USER_REQUIRED": "User required",
+  "PASSWORD_REQUIRED": "Password required",
+  "IP_ADDRESS_REQUIRED": "IP address required",
+  "HOST_NAME_REQUIRED": "Hostname required",
+  "ENTITY_ID_REQUIRED": "Entity id required",
+  "SINGLE_SIGN_REQUIRED": "Single sign on service required",
+  "SINGLE_LOGOUT_REQUIRED": "Single logout service required",
+  "CERTIFICATE_REQUIRED": "Certificate required"
+}

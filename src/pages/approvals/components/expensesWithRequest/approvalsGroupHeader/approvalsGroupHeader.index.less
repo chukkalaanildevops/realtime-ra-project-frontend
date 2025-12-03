@@ -1,0 +1,60 @@
+@import '../../../../../styles/variables.less';
+
+.group-item-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: @gutter * 0.5 @gutter * 0.33;
+
+  .select-item-checkbox {
+    margin-right: @gutter;
+  }
+
+  .profile {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+
+    .profile-photo {
+      margin-right: @gutter;
+    }
+
+    .profile-details {
+      .name {
+        font-weight: bold;
+      }
+      .designation {
+        color: @grey8;
+      }
+    }
+  }
+
+  .extra {
+    display: flex;
+    flex-flow: row;
+    width: max-content;
+    align-items: center;
+    justify-items: flex-end;
+    .item {
+      flex: 1;
+      width: 150px;
+      text-align: center;
+      align-items: center;
+
+      .value {
+        height: 37px;
+        line-height: 45px;
+        font-weight: bold;
+      }
+      .label {
+        color: @grey8;
+      }
+
+      &:last-child {
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+      }
+    }
+  }
+}

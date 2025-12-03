@@ -1,0 +1,12 @@
+---
+applications:
+  - name: reimburse
+    path: ../build/
+    instances: 1
+    buildpacks:
+      - staticfile_buildpack
+    memory: 1024M
+    disk_quota: 500M
+    timeout: 600
+    routes:
+      - route: reimburse.cfapps.ap11.hana.ondemand.com

@@ -1,0 +1,17 @@
+@import '../../../styles/variables.less';
+.tenant-config-container {
+  padding: @gutter*0.5;
+  width: 40%;
+
+  .switch-field {
+    display: flex;
+    flex-flow: row-reverse;
+    .ant-form-item-label {
+      flex: 4;
+    }
+    .ant-form-item-control {
+      flex: 1;
+      max-width: 64px;
+    }
+  }
+}

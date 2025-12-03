@@ -1,0 +1,34 @@
+{
+  "Expense": {
+    "Draft": 100,
+    "Pending": 200,
+    "Approved": 300,
+    "Rejected": 50,
+    "Settled": 400,
+    "Stalled": 25
+  },
+  "Benefits": {
+    "Draft": 50,
+    "Pending": 150,
+    "Approved": 250,
+    "Rejected": 20,
+    "Settled": 300,
+    "Stalled": 15
+  },
+  "Request": {
+    "Draft": 75,
+    "Pending": 100,
+    "Approved": 150,
+    "Rejected": 10,
+    "Settled": 200,
+    "Stalled": 5
+  },
+  "Expense With Request": {
+    "Draft": 120,
+    "Pending": 180,
+    "Approved": 270,
+    "Rejected": 30,
+    "Settled": 350,
+    "Stalled": 10
+  }
+}

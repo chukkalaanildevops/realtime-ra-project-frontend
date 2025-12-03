@@ -1,0 +1,17 @@
+@import '../../../styles/variables.less';
+
+.multi-select.customised-dropdown {
+  &.ant-select-focused {
+    .ant-select-selector {
+      display: flex;
+      span.ant-select-selection-search {
+        flex: 2;
+        cursor: text;
+        min-width: 35%;
+        input {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,82 @@
+@import '../../.../../../../../styles/variables.less';
+.configuration-form {
+  // padding: calc(@gutter * 0.5);
+  & .form-section {
+    &.only-div {
+      font-size: 1rem;
+      line-height: 1.57rem;
+      color: @primaryTextColor;
+      font-style: normal;
+      font-weight: 600;
+      margin-top: @gutter*0.76;
+      margin-bottom: @gutter*0.58;
+      margin-right: 0;
+      margin-left: 0;
+      &.m-t-0 {
+        margin-top: 0;
+      }
+    }
+    & label {
+      font-size: 1rem;
+      line-height: 1.57rem;
+      color: @primaryTextColor;
+      font-style: normal;
+      font-weight: 600;
+      margin: @gutter*0.42 0px;
+    }
+  }
+  & .ant-form-item {
+    margin-bottom: @gutter*0.42;
+    & .ant-form-item-label {
+      text-transform: capitalize;
+      // text-align: right;
+      padding-bottom: 0;
+      & label {
+        width: 100%;
+        & .custom-label {
+          display: flex;
+          flex: 1;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+    }
+    & .ant-form-item-control {
+      & .ant-form-item-control-input {
+        & .ant-form-item-control-input-content {
+          width: 200px;
+          & .ant-input-number {
+            width: 100%;
+          }
+        }
+      }
+    }
+    & .quill {
+      & * {
+        font-family: 'Poppins' !important;
+        border-color: @borderColor;
+        border-radius: @borderRadious;
+      }
+      & .ql-editor {
+        min-height: 100px;
+      }
+    }
+    &.form-footer {
+      text-align: right;
+    }
+  }
+}
+.allowance-search {
+  display: flex;
+  align-items: center;
+}
+.allowance-search-button {
+  position: absolute;
+  right: 10px;
+}
+.search-allowance-rate-select{
+  padding: 5px 12px;
+  &:hover{
+    cursor: "pointer"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "TITLE_REQUIRED": "Title required",
+  "CODE_REQUIRED": "Code required",
+  "COST_CENTRE_REQUIRED": "Cost centre required",
+  "GRACE_PERIOD_REQUIRED": "Grace period required",
+  "WAGE_TYPE_REQUIRED": "Wage type required",
+  "LEGAL_ENTITY_REQUIRED": "Legal entity required",
+  "EXPENSE_TYPE_REQUIRED": "Expense type required"
+}

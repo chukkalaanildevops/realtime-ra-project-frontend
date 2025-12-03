@@ -1,0 +1,22 @@
+{
+  "vaidationErrors": {
+    "title": {
+      "required": "Title is required"
+    },
+    "criteria": {
+      "required": "Please select criteria"
+    },
+    "entityType": {
+      "required": "Please select entity type"
+    },
+    "relation": {
+      "required": "Please select relation"
+    },
+    "entities": {
+      "required": "Please select entity"
+    },
+    "selectEmployees": {
+      "required": "Please select employee"
+    }
+  }
+}

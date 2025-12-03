@@ -1,0 +1,107 @@
+@import '../../../../../../../styles/variables.less';
+
+.filter-delegation {
+  &.active {
+    border-radius: 3px;
+    padding: @gutter * 0.5;
+  }
+  &.hidden {
+    display: none;
+  }
+
+  .filter-option {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    margin-right: @gutter;
+    margin-bottom: @gutter;
+    padding: 0 @gutter * 0.33;
+    border: 1px solid @grey3;
+    .label {
+      margin-right: @gutter * 0.5;
+      &:after {
+        content: '.';
+        margin-left: @gutter * 0.1;
+      }
+    }
+    .picker {
+      flex: 1;
+      .ant-select {
+        width: 100%;
+      }
+    }
+  }
+
+  .ant-row > .ant-col > .delegate-type {
+    display: flex;
+    flex-direction: row;
+
+    .delegate-type-label {
+      padding: 10px;
+      width: 200px;
+    }
+  }
+
+  .date-range {
+    display: flex;
+    flex-direction: row;
+
+    .date-label {
+      padding: 10px;
+      width: 200px;
+    }
+  }
+
+  .status-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    .status-label {
+      padding: 10px;
+      width: 200px;
+    }
+    .status-selection,
+    .ant-select {
+      width: 100%;
+    }
+  }
+
+  .activity-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    .activity-label {
+      padding: 10px;
+      width: 200px;
+    }
+
+    .ant-select {
+      width: 100%;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+
+    .apply-filter-button {
+      padding: 10px;
+    }
+    .reset-filter-button {
+      padding: 10px;
+    }
+  }
+
+  .delegated-users {
+    border-radius: 10px;
+    box-shadow: black;
+    width: 100%;
+
+    .ant-select {
+      width: 100%;
+    }
+  }
+}

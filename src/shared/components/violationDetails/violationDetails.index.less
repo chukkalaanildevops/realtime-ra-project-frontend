@@ -1,0 +1,72 @@
+@import '../../../styles/variables.less';
+
+.policy-violation-modal {
+  width: 70% !important;
+  max-height: 80%;
+
+  .ant-modal-header {
+    background: @grey3;
+    .ant-modal-title {
+      color: @darkTextColor;
+    }
+  }
+  .approval-risk-container {
+    padding: 10px;
+    margin-bottom: 20px;
+    &__risk-score {
+      padding-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+    &__risk-criteria-title-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 8px;
+    }
+    &__risk-criteria-title {
+      padding-bottom: 5px;
+      font-weight: 600;
+    }
+    &__risk-criteria-data {
+      padding-left: 15px;
+    }
+  }
+  .policy-violation-action-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.background-color-orange {
+  background-color: #fff5e6;
+}
+.background-color-red {
+  background-color: #ffe6e6;
+}
+.border-color-orange {
+  border: 1px solid #ffa500;
+}
+.border-color-red {
+  border: 1px solid #ff0000;
+}
+.border-color-black {
+  border: 1px solid #000000;
+}
+.color-orange {
+  color: #ffa500;
+}
+.color-red {
+  color: #ff0000;
+}
+.enforcement-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #000000;
+}
+.enforcement-icon {
+  margin-left: 5px;
+  font-size: large;
+  color: #ffaa5b;
+}

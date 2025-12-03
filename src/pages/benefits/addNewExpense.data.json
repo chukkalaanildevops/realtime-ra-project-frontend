@@ -1,0 +1,148 @@
+{
+  "vaidationErrors": {
+    "generalForm": {
+      "date": {
+        "mandatory": "{label} is required"
+      },
+      "expense_type_legal_entity": {
+        "mandatory": "{label} is required"
+      },
+      "purpose": {
+        "mandatory": "{label} is required"
+      },
+      "currency": {
+        "mandatory": "{label} is required"
+      },
+      "amount": {
+        "mandatory": "{label} is required"
+      },
+      "conversion_rate": {
+        "mandatory": "{label} is required"
+      },
+      "receipt_number": {
+        "mandatory": "{label} is required"
+      },
+      "no_receipt_remark": {
+        "mandatory": "{label} is required",
+        "old_mandatory": "Remark for no receipt attached is required"
+      },
+      "charge_to": {
+        "mandatory": "{label} is required"
+      },
+      "third_party_vendor": {
+        "mandatory": "{label} is required"
+      },
+      "cost_centre_uuid": {
+        "mandatory": "{label} is required"
+      },
+      "receipt": {
+        "mandatory": "{label} is required"
+      },
+      "rate": {
+        "mandatory": "{label} is required"
+      },
+      "supporting_documents": {
+        "duplicateUpload": "The support document already contains a uploaded file named"
+      }
+    },
+    "entertainmentForm": {
+      "staff_attendee_table": {
+        "mandatory": {
+          "member": "{label} is required",
+          "emp_id": "{label} is required",
+          "designation": "Designation is required"
+        }
+      },
+      "guest_attendee_table": {
+        "mandatory": {
+          "member": "{label} is required",
+          "organisation": "{label} is required",
+          "designation": "Designation is required"
+        }
+      }
+    },
+    "mileageForm": {
+      "tripDetails": {
+        "date": "{label} is required",
+        "from": "{label} is required!",
+        "to": "{label} is required!",
+        "mileageRate": "{label} is required!",
+        "AutoCalculatedMileage": "{label} is required!"
+      }
+    },
+    "pettyCashForm": {
+      "voucherNumber": {
+        "mandatory": "{label} is required"
+      }
+    }
+  },
+  "apiMessages": {
+    "fetchLoggedInUserInfo": {
+      "showLoader": true,
+      "loadingInfo": "",
+      "Success": "",
+      "Fail": "Failed to load user information"
+    },
+    "fetchUserJobInfo": {
+      "showLoader": true,
+      "loadingInfo": "",
+      "Success": "",
+      "Fail": "Failed to load user job information"
+    },
+    "fetchUserEntitledBenefitsList": {
+      "showLoader": true,
+      "loadingInfo": "",
+      "Success": "",
+      "Fail": "Failed to load data"
+    },
+    "createExpenseClaimGeneral": {
+      "showLoader": true,
+      "loadingInfo": "Saving claim in draft",
+      "Success": "Successfully saved claim in draft",
+      "Fail": "Failed to save claim in draft"
+    },
+    "expenseClaimSendForApproval": {
+      "showLoader": true,
+      "loadingInfo": "Sending claim for approvals",
+      "Success": "sent claim for approvals",
+      "Fail": "Failed to send claim for approvals"
+    },
+    "updateExpenseClaim": {
+      "showLoader": true,
+      "loadingInfo": "Saving claim in draft",
+      "Success": "Successfully saved claim in draft",
+      "Fail": "Failed to save claim in draft"
+    },
+    "fetchCostCentreChageTo": {
+      "showLoader": true,
+      "loadingInfo": "",
+      "Success": "",
+      "Fail": "Failed to load data"
+    },
+    "fetchDetailConfiguration": {
+      "showLoader": true,
+      "loadingInfo": "",
+      "Success": "",
+      "Fail": "Failed to load configuration data"
+    },
+    "fetchExpenseClaimData": {
+      "showLoader": true,
+      "loadingInfo": "",
+      "Success": "",
+      "Fail": "Failed to load data"
+    },
+    "fetchCoversionRate": {
+      "showLoader": false,
+      "loadingInfo": "",
+      "Success": "",
+      "Fail": "Failed to load currency conversion rate",
+      "notFound": "Currency conversion rate not available for selected currency. Please contact the administrator."
+    },
+    "fetchStaffMembersJobInfoList": {
+      "showLoader": false,
+      "loadingInfo": "",
+      "Success": "",
+      "Fail": "Failed to load staff members data"
+    }
+  }
+}

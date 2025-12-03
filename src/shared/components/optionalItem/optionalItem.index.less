@@ -1,0 +1,39 @@
+@import '../../../styles//variables.less';
+
+.instruction {
+  border: 1px solid @borderColor;
+  border-radius: @borderRadious;
+  padding: @gutter*0.5;
+}
+
+div.text-label {
+  margin: 0 @gutter*0.29 0 0rem;
+  color: @primaryTextColor;
+  justify-content: flex-start;
+  position: relative;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.57rem;
+}
+div.text-content {
+  display: inline-flex;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.57rem;
+  color: @primaryTextColor;
+  text-align: left;
+  word-break: break-word;
+  justify-content: flex-end;
+  vertical-align: middle;
+}
+div.icon-content {
+  display: inline-flex;
+  margin: 0 @gutter*0.29 0 @gutter*0.29;
+  font-weight: normal;
+  font-size: 1rem;
+  color: @primaryTextColor;
+  justify-content: flex-start;
+  position: relative;
+  font-weight: 600;
+}

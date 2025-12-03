@@ -1,0 +1,12 @@
+{
+"DATE_REQUIRED":"Date required",
+"LOCATION_REQUIRED":"Location required",
+"ALLOWANCETYPE_REQUIRED":"Allowance Type required",
+"APPROVEDAMOUNT_REQUIRED":"Approved Amount required",
+"RECEIPTAMOUNT_REQUIRED":"Receipt Amount required",
+"RECEIPTNUMBER_REQUIRED":"Receipt Number required",
+"NORECEIPTREMARK_REQUIRED":"No Receipt Remark required",
+"RECEIPT_REQUIRED":"Receipt Required",
+"CURRENCY_REQUIRED":"Currency Required",
+"CONVERSION_RATE_REQUIRED":"Conversion Rate Required"
+}

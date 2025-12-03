@@ -1,0 +1,88 @@
+{
+  "records": {
+    "drafts": [
+      {
+        "expenseId": "E2017-000001",
+        "title": "Local Travel",
+        "date": "12 Mar",
+        "amount": "293.66",
+        "isEditable": true
+      },
+      {
+        "expenseId": "E2017-000001",
+        "title": "Local Travel",
+        "date": "15 Mar",
+        "amount": "293.66"
+      },
+      {
+        "expenseId": "E2017-000001",
+        "title": "Local Travel",
+        "date": "13 Mar",
+        "amount": "293.66"
+      },
+      {
+        "expenseId": "E2017-000001",
+        "title": "Local Travel",
+        "date": "11 Mar",
+        "amount": "293.66"
+      },
+      {
+        "expenseId": "E2017-000001",
+        "title": "Local Travel",
+        "date": "23 Mar",
+        "amount": "293.66",
+        "isEditable": true
+      },
+      {
+        "expenseId": "E2017-000001",
+        "title": "Local Travel",
+        "date": "15 Mar",
+        "amount": "293.66"
+      },
+      {
+        "expenseId": "E2017-000001",
+        "title": "Local Travel",
+        "date": "14 Mar",
+        "amount": "293.66"
+      }
+    ],
+    "savedReceipts": [
+      {
+        "expenseId": "E2017-000001",
+        "title": "Receipt No.",
+        "date": "16 Mar"
+      }
+    ],
+    "approvedTripReceipts": [
+      {
+        "title": "Travel Request",
+        "expenseId": "E2017-000001",
+        "date": "15 Mar",
+        "amount": "3974"
+      }
+    ],
+    "availableBenefits": [
+      {
+        "title": "Benefit title",
+        "expenseId": "E2017-000001",
+        "amount": "342",
+        "grantedAmount": "100",
+        "date": "14 Mar"
+      }
+    ],
+    "rejectedExpenses": [
+      {
+        "expenseId": "E2017-000001",
+        "date": "15 Mar",
+        "amount": "293.66",
+        "title": "Rejected Title"
+      },
+      {
+        "expenseId": "E2017-000001",
+        "date": "15 Mar",
+        "amount": "293.66",
+        "title": "Rejected Title"
+      }
+    ]
+  }
+}

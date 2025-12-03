@@ -1,0 +1,23 @@
+@import '../../../styles/variables.less';
+.cron-builder {
+  .frequency-selector,
+  .days-selector {
+    min-width: 150px;
+  }
+  .fields {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: flex-start;
+    .field {
+      &:first-child {
+        margin-right: @gutter;
+      }
+    }
+  }
+  > .field {
+    margin-top: @gutter * 0.75;
+    /* min-width: 116px; */
+    margin-bottom: @gutter * 0.2084;
+  }
+}

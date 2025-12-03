@@ -1,0 +1,48 @@
+@import '../../../styles/variables.less';
+
+& .configuration-detail-page-tabs {
+  & .ant-tabs-bar {
+    margin-bottom: 0;
+  }
+  .ant-tabs-content {
+    & .ant-tabs-tabpane {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+.custom-field {
+  margin-bottom: @gutter;
+  & .fields-label {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.14rem;
+    line-height: 1.83rem;
+    color: @primaryTextColor;
+  }
+  & .field-properties {
+    border: 1px solid @borderColor;
+    border-radius: @borderRadious;
+    padding: @gutter * 0.75 @gutter * 0.67;
+
+    & .property-type {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 1.83rem;
+      color: @primaryTextColor;
+    }
+
+    & .property-val {
+      font-size: 1rem;
+      line-height: 1.83rem;
+      color: @primaryTextColor;
+      text-transform: capitalize;
+
+      & .anticon {
+        margin-right: @gutter * 0.27;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@import '../../../styles/variables.less';
+.custom-dropdown {
+  &.ant-dropdown-trigger {
+    &[disabled] {
+      cursor: not-allowed;
+      color: rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  .menu-button {
+    color: @grey8;
+    padding: 0;
+
+    .ant-btn-default {
+      border-color: transparent;
+      box-shadow: none;
+      color: @grey8;
+    }
+
+    .ant-btn-default:hover {
+      background-color: #e6f7ff;
+      color: #1890ff;
+    }
+
+    & > :first-child {
+      // display: block;
+      // min-width: 100%;
+      // text-align: left;
+      display: block;
+      text-align: left;
+      padding: 5px 20px;
+      min-height: 40px;
+      min-width: 200px;
+    }
+
+    a {
+      display: inline-block;
+      width: 100%;
+    }
+  }
+}

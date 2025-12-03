@@ -1,0 +1,176 @@
+{
+  "expense": [
+    {
+      "category": "General",
+      "expense_type": "Expense 1",
+      "no_of_claims": 5,
+      "claimed_amount": "$1000",
+      "settled_amount": "$800"
+    },
+    {
+      "category": "Petty Cash",
+      "expense_type": "Expense 2",
+      "no_of_claims": 5,
+      "claimed_amount": "$1000",
+      "settled_amount": "$800"
+    },
+    {
+      "category": "Entertainment",
+      "expense_type": "Expense 3",
+      "no_of_claims": 5,
+      "claimed_amount": "$1000",
+      "settled_amount": "$800"
+    },
+    {
+      "category": "Petty Cash",
+      "expense_type": "Expense 4",
+      "no_of_claims": 3,
+      "claimed_amount": "$500",
+      "settled_amount": "$400"
+    },
+    {
+      "category": "Petty Cash",
+      "expense_type": "Expense 5",
+      "no_of_claims": 2,
+      "claimed_amount": "$300",
+      "settled_amount": "$200"
+    },
+    {
+      "category": "General",
+      "expense_type": "Expense 5",
+      "no_of_claims": 2,
+      "claimed_amount": "$300",
+      "settled_amount": "$200"
+    },
+    {
+      "category": "Entertainment",
+      "expense_type": "Expense 6",
+      "no_of_claims": 2,
+      "claimed_amount": "$300",
+      "settled_amount": "$200"
+    },
+    {
+      "category": "General",
+      "expense_type": "Expense 7",
+      "no_of_claims": 2,
+      "claimed_amount": "$300",
+      "settled_amount": "$200"
+    },
+    {
+      "category": "Petty Cash",
+      "expense_type": "Expense 8",
+      "no_of_claims": 2,
+      "claimed_amount": "$300",
+      "settled_amount": "$200"
+    },
+    {
+      "category": "Allowance",
+      "expense_type": "Expense 9",
+      "no_of_claims": 2,
+      "claimed_amount": "$300",
+      "settled_amount": "$200"
+    }
+  ],
+  "request": [
+    {
+      "category": "Travel",
+      "expense_type": "request 1",
+      "no_of_claims": 4,
+      "claimed_amount": "$800",
+      "settled_amount": "$700"
+    },
+    {
+      "category": "General",
+      "expense_type": "request 2",
+      "no_of_claims": 2,
+      "claimed_amount": "$400",
+      "settled_amount": "$300"
+    },
+    {
+      "category": "Travel",
+      "expense_type": "request 3",
+      "no_of_claims": 4,
+      "claimed_amount": "$800",
+      "settled_amount": "$700"
+    },
+    {
+      "category": "General",
+      "expense_type": "request 4",
+      "no_of_claims": 4,
+      "claimed_amount": "$800",
+      "settled_amount": "$700"
+    },
+    {
+      "category": "Travel",
+      "expense_type": "request 5",
+      "no_of_claims": 4,
+      "claimed_amount": "$800",
+      "settled_amount": "$700"
+    },
+    {
+      "category": "General",
+      "expense_type": "request 6",
+      "no_of_claims": 4,
+      "claimed_amount": "$800",
+      "settled_amount": "$700"
+    },
+    {
+      "category": "General",
+      "expense_type": "request 7",
+      "no_of_claims": 4,
+      "claimed_amount": "$800",
+      "settled_amount": "$700"
+    }
+  ],
+  "benefit": [
+    {
+      "category": "Benefit 1",
+      "expense_type": "benefit 1",
+      "no_of_claims": 1,
+      "claimed_amount": "$200",
+      "settled_amount": "$150"
+    },
+    {
+      "category": "Benefit 2",
+      "expense_type": "benefit 2",
+      "no_of_claims": 4,
+      "claimed_amount": "$800",
+      "settled_amount": "$700"
+    },
+    {
+      "category": "Benefit 3",
+      "expense_type": "benefit 3",
+      "no_of_claims": 1,
+      "claimed_amount": "$200",
+      "settled_amount": "$150"
+    },
+    {
+      "category": "Benefit 4",
+      "expense_type": "benefit 4",
+      "no_of_claims": 1,
+      "claimed_amount": "$200",
+      "settled_amount": "$150"
+    },
+    {
+      "category": "Benefit 4",
+      "expense_type": "benefit 5",
+      "no_of_claims": 1,
+      "claimed_amount": "$200",
+      "settled_amount": "$150"
+    },
+    {
+      "category": "Benefit 5",
+      "expense_type": "benefit 6",
+      "no_of_claims": 1,
+      "claimed_amount": "$200",
+      "settled_amount": "$150"
+    },
+    {
+      "category": "Benefit 6",
+      "expense_type": "benefit 8",
+      "no_of_claims": 1,
+      "claimed_amount": "$200",
+      "settled_amount": "$150"
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+@import '../../../../styles/variables.less';
+
+.search-expenses-body {
+  background-color: white;
+  min-height: 100%;
+  padding: @gutter*.5;
+
+  .back-button {
+    padding-bottom: @gutter*0.5;
+  }
+
+  .no-data-container {
+    width: 100% !important;
+  }
+
+  .loadMoreBtn {
+    text-align: center;
+    margin-top: @gutter*.25;
+  }
+
+  .single-result {
+    display: flex;
+    padding: 0.5rem 1rem;
+    align-items: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: @grey2;
+    border-radius: @borderRadious;
+
+    .content-layer {
+      width: 100%;
+      padding: @gutter * 0.25;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .employee-card {
+        flex: 1;
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+
+        > div {
+          margin-left: @gutter*.5;
+        }
+
+        .test {
+          height: @gutter*5 / 3;
+          width: @gutter*5 / 3;
+          border-radius: @gutter*5 / 6;
+          color: @geekblue1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-weight: bold;
+          font-size: @gutter;
+
+          &.EXPE {
+            &.General {
+              background-color: @blue3;
+            }
+            &.Entertainment {
+              background-color: @red3;
+            }
+            &.Petty.Cash {
+              background-color: @volcano3;
+            }
+            &.Mileage {
+              background-color: @gold4;
+            }
+          }
+          &.REQU {
+            &.GENERAL {
+              background-color: @green5;
+            }
+            &.TRAVEL {
+              background-color: @gold4;
+            }
+          }
+
+          .material-menu-icons {
+            width: 26px !important;
+            height: 26px !important;
+            transition: all 0.1s ease-in;
+            vertical-align: middle;
+            margin: 0;
+            pointer-events: none;
+          }
+        }
+        .field2 {
+          width: @gutter*7;
+          color: @grey9;
+          font-weight: bold;
+        }
+
+        .field3 {
+          color: @grey6;
+        }
+        .field4 {
+          color: @grey6;
+        }
+        .field5 {
+          color: @grey6;
+        }
+
+        .circle {
+          height: @gutter*.25;
+          width: @gutter*.25;
+          background-color: @grey5;
+          border-radius: @gutter*.25;
+        }
+      }
+
+      .right-outlined {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+}

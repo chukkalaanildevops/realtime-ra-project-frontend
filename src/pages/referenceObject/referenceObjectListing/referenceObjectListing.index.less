@@ -1,0 +1,156 @@
+@import '../../../styles/variables.less';
+
+.reference-objects-listing-container {
+  min-height: 100%;
+  padding: @gutter;
+  background: @grey1;
+  border-radius: @borderRadius;
+
+  .ant-pagination {
+    text-align: right;
+    margin-top: @gutter*0.83;
+  }
+
+  .ant-drawer {
+    .ant-drawer-content-wrapper {
+      top: 84px;
+      height: calc(100% - 84px);
+    }
+  }
+
+  .ant-drawer-body {
+    .ant-col {
+      margin-bottom: @gutter * 0.83;
+    }
+
+    span.text-label {
+      display: block;
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 1.57rem;
+      word-break: break-word;
+
+      &:not(.disable.non-interactive) {
+        color: @primaryTextColor;
+      }
+      .anticon {
+        margin-right: @gutter * 0.25;
+      }
+    }
+    span.text-content {
+      display: block;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1rem;
+      line-height: 1.57rem;
+      color: @primaryTextColor;
+      word-break: break-word;
+
+      div {
+        margin-left: @gutter * 0.83;
+        .anticon {
+          margin-right: @gutter * 0.25;
+        }
+      }
+
+      .list {
+        &.max-10-scroll {
+          &.active {
+            height: 210px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            margin-bottom: @gutter*0.42;
+            // padding: @gutter*0.21 0;
+
+            scroll-snap-type: mandatory;
+            scroll-snap-points-y: repeat(210px);
+            scroll-snap-type: y mandatory;
+
+            li {
+              scroll-snap-align: start;
+            }
+          }
+        }
+      }
+
+      .item-form {
+        * {
+          margin: 0;
+        }
+
+        .item-input-container {
+          margin: @gutter*0.42 0;
+          input {
+            display: inline-block;
+            width: 90%;
+          }
+          .dynamic-delete-button {
+            display: inline-block;
+            width: 10%;
+            margin: 0;
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+            top: 4px;
+            font-size: 1.71rem;
+            color: @grey7;
+            // color: #999;
+            transition: all 0.3s;
+          }
+          .dynamic-delete-button:hover {
+            color: @grey8;
+            // color: #777;
+          }
+          .dynamic-delete-button[disabled] {
+            cursor: not-allowed;
+            pointer-events: none;
+            opacity: 0.5;
+          }
+        }
+
+        .form-button-container {
+          text-align: right;
+          margin: @gutter*0.42 0;
+
+          button {
+            text-align: center;
+            margin: 0 @gutter*0.21;
+            min-width: 115px;
+          }
+        }
+
+        .max-5-scroll {
+          &.active {
+            height: 210px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            margin-bottom: @gutter*0.42;
+            // padding: @gutter*0.21 0;
+
+            scroll-snap-type: mandatory;
+            scroll-snap-points-y: repeat(210px);
+            scroll-snap-type: y mandatory;
+
+            .ant-form-item {
+              scroll-snap-align: start;
+            }
+          }
+        }
+      }
+      .extend {
+        width: 100% !important;
+        margin-right: 0 !important;
+      }
+      span.text-label {
+        font-weight: normal;
+
+        &:not(.disable.non-interactive) {
+          color: @primaryTextColor;
+        }
+        .anticon {
+          margin-right: @gutter * 0.25;
+        }
+      }
+    }
+  }
+}

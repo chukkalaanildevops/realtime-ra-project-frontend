@@ -1,0 +1,19 @@
+{
+  "addReferenceObject": {
+    "vaidationErrors": {
+      "title": {
+        "required": "Title is required"
+      },
+      "code": {
+        "required": "Code is required"
+      },
+      "items": {
+        "required": "Item is required",
+        "unique": "Unique value required"
+      },
+      "itemFile": {
+        "required": "File is required"
+      }
+    }
+  }
+}

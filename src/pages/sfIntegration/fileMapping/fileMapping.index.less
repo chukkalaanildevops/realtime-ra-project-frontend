@@ -1,0 +1,28 @@
+@import '../../../styles/variables.less';
+
+.file-configuration-container {
+  display: block;
+  padding: @gutter * 0.83;
+  background: @grey1;
+  min-height: 100%;
+  border-radius: @borderRadius;
+
+  .default-file-name {
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  .rename-file-wrapper {
+    display: flex;
+    align-items: center;
+
+    div {
+      width: 150px;
+      font-weight: 600;
+    }
+  }
+
+  .table-wrapper {
+    margin-top: @gutter*0.5;
+  }
+}

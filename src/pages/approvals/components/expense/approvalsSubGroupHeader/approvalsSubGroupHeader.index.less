@@ -1,0 +1,49 @@
+@import '../../../../../styles/variables.less';
+
+.subgroup-item-header {
+  display: flex;
+  align-items: center;
+  color: @grey8!important;
+  padding: 0 @gutter * 0.33;
+  justify-content: space-between;
+
+  .extra {
+    display: flex;
+    flex-flow: row;
+    width: max-content;
+    align-items: center;
+    justify-items: flex-end;
+
+    .item {
+      flex: 1;
+      width: 150px;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-items: center;
+
+      &:last-child {
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+      }
+
+      .amount {
+        color: @grey8!important;
+        .ant-statistic-content {
+          color: @grey8!important;
+        }
+      }
+    }
+  }
+
+  .count {
+    text-align: center;
+    span {
+      color: @grey8;
+      padding: @gutter * 0.35;
+      background-color: @grey2;
+    }
+  }
+
+}
