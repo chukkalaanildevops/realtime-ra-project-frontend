@@ -1,36 +1,35 @@
 pipeline {
-  agent any
-
-  tools {
-    nodejs 'node18'
-  }
-
-  stages {
-    stage('Checkout') {
-      steps {
-        checkout scm
-      }
+    agent {
+        docker {
+            image 'node:18-alpine'
+            args '-u root'
+        }
     }
 
-    stage('Install Dependencies') {
-      steps {
-        sh 'npm install'
-      }
+    environment {
+        NODE_OPTIONS = "--openssl-legacy-provider"
     }
 
-    stage('Build Frontend') {
-      steps {
-        sh 'npm run build'
-      }
-    }
-  }
+    stages {
+        stage('Install Dependencies') {
+            steps {
+                sh 'npm install'
+            }
+        }
 
-  post {
-    success {
-      echo 'Frontend build successful'
+        stage('Build Frontend') {
+            steps {
+                sh 'npm run build'
+            }
+        }
     }
-    failure {
-      echo 'Frontend build failed'
+
+    post {
+        success {
+            echo '✅ Frontend build successful'
+        }
+        failure {
+            echo '❌ Frontend build failed'
+        }
     }
-  }
 }
